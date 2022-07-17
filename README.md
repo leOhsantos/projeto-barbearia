@@ -1,13 +1,13 @@
 <div align="center">
 <img src="assets/img/logo.png" width="300px">
-<h1> 💈 <strong>Na Régua Barbershop</strong> 💈</h1>
+<h1>💈 <strong>Na Régua Barbershop</strong> 💈</h1>
 </div>
 
 **Na Régua Barbershop** é um sistema web de uma barbearia fictícia. Na página principal é apresentado ao usuário sobre a barbearia, lá podemos ver seus serviços, produtos e uma área onde os usuários podem enviar uma mensagem ao estabelecimento. Ao acessar a área do profissional através de um login, o administrador da barbearia pode **visualizar, inserir, excluir ou alterar** os dados sobre seus serviços, produtos e clientes, além de ter acesso as mensagens que os usuários o enviam através da página principal.
 
 <br>
 
-## ⭐ **Tecnologias utilizadas** ⭐
+## **Tecnologias utilizadas**
 
 <br>
 
@@ -25,7 +25,7 @@
 
 <br>
 
-## ⭐ **Ferramentas utilizadas** ⭐
+## **Ferramentas utilizadas**
 
 <br>
 
@@ -36,7 +36,7 @@
 
 <br>
 
-## ⭐ **Design do sistema** ⭐
+## **Design do sistema**
 
 <br>
 
@@ -70,7 +70,7 @@
 
 <br><br>
 
-## ⭐ **Funcionalidades do sistema** ⭐
+## **Funcionalidades do sistema**
 
 <br>
 
@@ -100,7 +100,7 @@ Os formulários possuem validações para evitar que haja inserção ou alteraç
 
 <br><br>
 
-## ⭐ **Hospedagem do sistema** ⭐
+## **Hospedagem do sistema**
 
 <br>
 
