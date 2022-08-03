@@ -60,8 +60,10 @@ $stmt2 = $product->list();
 
     <main>
         <section id="service">
-            <h2>Nossos Serviços</h2>
-            <div class="index-hr"></div>
+            <div class="title-container" data-aos="fade-up">
+                <h2>Nossos Serviços</h2>
+                <div class="index-hr"></div>
+            </div>
             <div class="img-col">
                 <?php
                 foreach ($stmt as $row) { ?>
@@ -75,8 +77,10 @@ $stmt2 = $product->list();
         </section>
 
         <section id="product">
-            <h2>Nossos Produtos</h2>
-            <div class="index-hr"></div>
+            <div class="title-container" data-aos="fade-up">
+                <h2>Nossos Produtos</h2>
+                <div class="index-hr"></div>
+            </div>
             <div class="img-col">
                 <?php
                 foreach ($stmt2 as $row) { ?>

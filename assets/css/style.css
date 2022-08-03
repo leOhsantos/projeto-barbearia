@@ -483,6 +483,12 @@ td {
   align-items: center;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h2 {
   text-transform: uppercase;
   font-size: 25px;
