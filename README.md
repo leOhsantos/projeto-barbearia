@@ -42,6 +42,8 @@
 
  - **Página principal:**
 
+ Os serviços e produtos se adaptam e se posicionam no site de acordo com o tamanho da tela que o usuário está visualizando.
+
 <img src="assets/img/index.gif" alt="Gif página principal">
 
 <br><br>
