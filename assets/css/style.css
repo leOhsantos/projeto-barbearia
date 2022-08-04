@@ -474,7 +474,10 @@ td {
 }
 
 #service,
-#product,
+#product {
+  padding-top: 30px;
+}
+
 #contactUs {
   padding-top: 30px;
   display: flex;

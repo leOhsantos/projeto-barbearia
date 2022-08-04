@@ -10,7 +10,7 @@ $stmt2 = $message->countMessagesNumber();
 
 <section id="containerColumn" class="container-column container-fluid">
 
-    <div class="column-1">
+    <div class="column-1 container">
 
         <?php foreach ($stmt2 as $row) {
             if ($row[0] == 0) {

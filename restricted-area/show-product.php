@@ -33,7 +33,7 @@ $stmt = $product->list();
         </form>
     </div>
 
-    <div class="column-2">
+    <div class="column-2 container">
         <h3>Produtos registrados</h3>
         <div class="form-hr"></div>
         <div class="img-col">

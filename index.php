@@ -59,7 +59,7 @@ $stmt2 = $product->list();
     </header>
 
     <main>
-        <section id="service">
+        <section id="service" class="container">
             <div class="title-container" data-aos="fade-up">
                 <h2>Nossos Serviços</h2>
                 <div class="index-hr"></div>
@@ -76,7 +76,7 @@ $stmt2 = $product->list();
             </div>
         </section>
 
-        <section id="product">
+        <section id="product" class="container">
             <div class="title-container" data-aos="fade-up">
                 <h2>Nossos Produtos</h2>
                 <div class="index-hr"></div>
