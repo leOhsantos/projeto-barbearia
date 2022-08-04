@@ -30,8 +30,8 @@
 <br>
 
 <div align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" height="60em">
-<img src="assets/img/xampp-icon.png" alt="" height="60em">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Visual Studio Code" height="60em">
+<img src="assets/img/xampp-icon.png" alt="XAMPP" height="60em">
 </div>
 
 <br>
@@ -101,8 +101,6 @@ Os formulários possuem validações para evitar que haja inserção ou alteraç
 <br><br>
 
 ## **Hospedagem do sistema**
-
-<br>
 
 Caso você queira visualizar melhor esse projeto em seu navegador, acesse o link abaixo:
 
