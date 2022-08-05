@@ -42,8 +42,6 @@
 
  - **Página principal:**
 
- Os serviços e produtos se adaptam e se posicionam no site de acordo com o tamanho da tela que o usuário está visualizando.
-
 <img src="assets/img/index.gif" alt="Gif página principal">
 
 <br><br>
@@ -82,9 +80,15 @@
 
 <br><br>
 
-- **Alteração e exclusão de dados:**
+- **Alteração de dados:**
 
-<img src="assets/img/edit-delete-data.gif" alt="Gif alteração e exclusão de dados">
+<img src="assets/img/edit-data.gif" alt="Gif alteração de dados">
+
+<br><br>
+
+- **Exclusão de dados:**
+
+<img src="assets/img/delete-data.gif" alt="Gif exclusão de dados">
 
 <br><br>
 
