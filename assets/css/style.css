@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
-  width: 46vh;
+  max-width: 46vh;
 }
 
 .restricted-area {
