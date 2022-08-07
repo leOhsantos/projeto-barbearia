@@ -25,7 +25,7 @@ $stmt2 = $product->list();
     <title>Na Régua Barbershop</title>
 </head>
 
-<body class="index-bg">
+<body class="index-bg select-disable">
 
     <header id="home" class="index-header">
         <nav class="navbar navbar-expand-lg fixed-top">

@@ -1,4 +1,4 @@
-<header>
+<header class="select-disable">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="barbershop-name">Na Régua Barbershop</div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,4 +48,4 @@
 
 </header>
 
-<main class="restricted-area">
+<main class="restricted-area select-disable">

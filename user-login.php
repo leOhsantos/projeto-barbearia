@@ -17,7 +17,7 @@
 
 <body>
 
-    <section class="user-container">
+    <section class="user-container select-disable">
         <div class="user-bg"><img src="assets/img/logo.png" alt="Na Régua Barbershop Logo" class="logo animate__animated animate__bounceIn"></div>
         <div class="login-user-form">
             <h1 class="title">Área do Profissional</h1>
