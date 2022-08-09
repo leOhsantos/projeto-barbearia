@@ -28,6 +28,7 @@ const validateFields = () => {
     }
 
     if (emailInput.value !== "" && messageInput.value !== "" && emailTest === true) {
+        alert('Mensagem enviada com sucesso!');
         form.submit();
     }
 }
