@@ -25,7 +25,7 @@ $stmt5 = $service->list();
         <form id="form" class="form" method="post" action="crud-scheduling.php">
             <input type="hidden" name="scheduleId" value="<?php echo @$_GET['scheduleId'] ?>">
             <label for="clientInput">Selecione o cliente:</label>
-            <select id="clientInput" class="rt-text-input" name="clientId">
+            <select id="clientInput" class="rt-text-input select-disable" name="clientId">
                 <option value="0">Selecionar</option>
 
                 <?php foreach ($stmt2 as $row) {
@@ -35,11 +35,11 @@ $stmt5 = $service->list();
 
             </select>
             <label for="dateInput">Agende a data:</label>
-            <input type="date" id="dateInput" class="rt-text-input" name="scheduleDate">
+            <input type="date" id="dateInput" class="rt-text-input select-disable" name="scheduleDate">
             <label for="hourInput">Agende a hora:</label>
-            <input type="time" id="hourInput" class="rt-text-input" name="scheduleHour">
+            <input type="time" id="hourInput" class="rt-text-input select-disable" name="scheduleHour">
             <label for="serviceInput">Selecione o serviço:</label>
-            <select id="serviceInput" class="rt-text-input" name="serviceId">
+            <select id="serviceInput" class="rt-text-input select-disable" name="serviceId">
                 <option value="0">Selecionar</option>
 
                 <?php foreach ($stmt4 as $row) {
@@ -107,7 +107,7 @@ $stmt5 = $service->list();
                                             <div class="modal-body modal-body-edit">
                                                 <input type="hidden" class="form-control id-input" name="scheduleId">
                                                 <label for="clientInput" class="col-form-label">Selecione o cliente:</label>
-                                                <select id="clientInput" class="form-control client-input" name="clientId">
+                                                <select id="clientInput" class="form-control client-input select-disable" name="clientId">
                                                     <option value="0">Selecionar</option>
 
                                                     <?php foreach ($stmt3 as $row) {
@@ -117,11 +117,11 @@ $stmt5 = $service->list();
 
                                                 </select>
                                                 <label for="dateInput" class="col-form-label">Agende a data:</label>
-                                                <input type="date" id="dateInput" class="form-control date-input" name="scheduleDate">
+                                                <input type="date" id="dateInput" class="form-control date-input select-disable" name="scheduleDate">
                                                 <label for="hourInput" class="col-form-label">Agende a hora:</label>
-                                                <input type="time" id="hourInput" class="form-control hour-input" name="scheduleHour">
+                                                <input type="time" id="hourInput" class="form-control hour-input select-disable" name="scheduleHour">
                                                 <label for="serviceInput" class="col-form-label">Selecione o serviço:</label>
-                                                <select id="serviceInput" class="form-control service-input" name="serviceId">
+                                                <select id="serviceInput" class="form-control service-input select-disable" name="serviceId">
                                                     <option value="0">Selecionar</option>
 
                                                     <?php

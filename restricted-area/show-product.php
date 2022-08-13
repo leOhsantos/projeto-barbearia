@@ -15,12 +15,12 @@ $stmt = $product->list();
         <form id="form" class="form" method="post" action="crud-product.php" enctype="multipart/form-data">
             <input type="hidden" name="productId" value="<?php echo @$_GET['productId'] ?>">
             <label for="nameInput">Digite o nome do produto:</label>
-            <input type="text" id="nameInput" class="rt-text-input" name="productName" maxlength="40" placeholder="Nome do produto">
+            <input type="text" id="nameInput" class="rt-text-input select-disable" name="productName" maxlength="40" placeholder="Nome do produto">
             <label for="descInput">Digite a descrição do produto:</label>
-            <input type="text" id="descInput" class="rt-text-input" name="productDesc" maxlength="80" placeholder="Descrição do produto">
+            <input type="text" id="descInput" class="rt-text-input select-disable" name="productDesc" maxlength="80" placeholder="Descrição do produto">
             <label for="imgInput" style="display: block;">Envie uma imagem do produto:</label>
             <div class="send-img-container">
-                <label for="imgInput" id="imgLabel" class="img-input">
+                <label for="imgInput" id="imgLabel" class="img-input select-disable">
                     <h6 id="textLabel">Clique aqui para enviar a imagem</h6><img id="img" src="" onerror="this.style.display='none'">
                 </label>
                 <input hidden type="file" accept=".jpg, .png" id="imgInput" class="rt-text-input" name="productImg">
@@ -39,7 +39,7 @@ $stmt = $product->list();
         <div class="img-col">
             <?php foreach ($stmt as $row) { ?>
                 <div class="img-container">
-                    <img src="img/product-img/<?php echo $row[3] ?>" alt="Imagem do produto" class="img">
+                    <img src="img/product-img/<?php echo $row[3] ?>" alt="Imagem do produto" class="img select-disable">
                     <p class="img-name"><?php echo $row[2] ?></p>
                     <p><?php echo $row[1] ?></p>
                     <div class="btn-container">
@@ -74,12 +74,12 @@ $stmt = $product->list();
                                         <div class="modal-body modal-body-edit">
                                             <input type="hidden" class="form-control id-input" name="productId">
                                             <label for="nameInput" class="col-form-label">Nome:</label>
-                                            <input type="text" id="nameInput" class="form-control name-input" name="productName" maxlength="40">
+                                            <input type="text" id="nameInput" class="form-control name-input select-disable" name="productName" maxlength="40">
                                             <label for="descInput" class="col-form-label">Descrição:</label>
-                                            <input type="text" id="descInput" class="form-control desc-input" name="productDesc" maxlength="80">
+                                            <input type="text" id="descInput" class="form-control desc-input select-disable" name="productDesc" maxlength="80">
                                             <label for="imgInput2" class="col-form-label" style="display: block;">Envie uma imagem do produto:</label>
                                             <div class="send-img-container">
-                                                <label for="imgInput2" class="img-input">
+                                                <label for="imgInput2" class="img-input select-disable">
                                                     <h6 id="textLabel" class="text-label">Clique aqui para enviar a imagem</h6><img id="imgLabel" class="img" src="" onerror="this.style.display='none'">
                                                 </label>
                                                 <input hidden type="file" accept=".jpg, .png" id="imgInput2" class="product-img-input" name="productImg">

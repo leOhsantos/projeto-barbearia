@@ -17,22 +17,22 @@
 
 <body>
 
-    <section class="user-container select-disable">
-        <div class="user-bg"><img src="assets/img/logo.png" alt="Na Régua Barbershop Logo" class="logo animate__animated animate__bounceIn"></div>
+    <section class="user-container">
+        <div class="user-bg"><img src="assets/img/logo.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__bounceIn"></div>
         <div class="login-user-form">
             <h1 class="title">Área do Profissional</h1>
             <div class="login-hr"></div>
             <p class="user-login-text">Preencha os campos abaixo para acessar a Área do Profissional.</p>
             <form id="form" class="form" action="validate-user-login.php" method="post">
-                <input name="userLogin" id="userInput" class="text-input" type="text" placeholder="Nome de usuário" maxlength="40">
+                <input name="userLogin" id="userInput" class="text-input select-disable" type="text" placeholder="Nome de usuário" maxlength="40">
                 <div class="password-container">
-                    <input name="userPassword" id="passwordInput" class="text-input" type="password" placeholder="Senha" maxlength="128">
-                    <span class="material-symbols-outlined">visibility_off</span>
+                    <input name="userPassword" id="passwordInput" class="text-input select-disable" type="password" placeholder="Senha" maxlength="128">
+                    <span class="material-symbols-outlined select-disable">visibility_off</span>
                 </div>
                 <p id="errorText">.</p>
                 <input id="submitBtn" class="submit-login-btn" type="button" value="Entrar">
             </form>
-            <div id="backButton"><span class="material-icons">arrow_back</span></div>
+            <div id="backButton"><span class="material-icons select-disable">arrow_back</span></div>
         </div>
     </section>
 

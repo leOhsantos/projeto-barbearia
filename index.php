@@ -25,7 +25,7 @@ $stmt2 = $product->list();
     <title>Na Régua Barbershop</title>
 </head>
 
-<body class="index-bg select-disable">
+<body class="index-bg">
 
     <header id="home" class="index-header">
         <nav class="navbar navbar-expand-lg fixed-top">
@@ -34,7 +34,7 @@ $stmt2 = $product->list();
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarNavDropdown" class="menu collapse navbar-collapse">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav select-disable">
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
@@ -52,7 +52,7 @@ $stmt2 = $product->list();
         </nav>
 
         <div class="container-logo">
-            <img src="assets/img/logo.png" alt="Na Régua Barbershop Logo" class="logo animate__animated animate__fadeInDown">
+            <img src="assets/img/logo.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__fadeInDown">
             <h3 class="animate__animated animate__fadeInLeft">Tá afim de dar um trato no seu visual? Cola aqui!<br>
                 Rua Borboletas Psicodélicas Nº665 - São Paulo</h3>
         </div>
@@ -68,7 +68,7 @@ $stmt2 = $product->list();
                 <?php
                 foreach ($stmt as $row) { ?>
                     <div class="img-container" data-aos="fade-up">
-                        <img src="<?php echo "restricted-area/img/service-img/" . $row[3] ?>" alt="Imagem do produto" class="img">
+                        <img src="<?php echo "restricted-area/img/service-img/" . $row[3] ?>" alt="Imagem do produto" class="img select-disable">
                         <p class="img-name"><?php echo $row[2] ?></p>
                         <p><?php echo $row[1] ?></p>
                     </div>
@@ -85,7 +85,7 @@ $stmt2 = $product->list();
                 <?php
                 foreach ($stmt2 as $row) { ?>
                     <div class="img-container" data-aos="fade-up">
-                        <img src="<?php echo "restricted-area/img/product-img/" . $row[3] ?>" alt="Imagem do produto" class="img">
+                        <img src="<?php echo "restricted-area/img/product-img/" . $row[3] ?>" alt="Imagem do produto" class="img select-disable">
                         <p class="img-name"><?php echo $row[2] ?></p>
                         <p><?php echo $row[1] ?></p>
                     </div>
@@ -98,9 +98,9 @@ $stmt2 = $product->list();
             <div class="index-hr"></div>
             <form id="form" class="form" method="post" action="restricted-area/crud-message.php">
                 <label for="emailInput">Digite seu endereço de e-mail:</label>
-                <input type="email" id="emailInput" class="index-text-input" name="clientEmail" maxlength="60" placeholder="exemplo123@gmail.com">
+                <input type="email" id="emailInput" class="index-text-input select-disable" name="clientEmail" maxlength="60" placeholder="exemplo123@gmail.com">
                 <label for="messageInput">Digite sua mensagem:</label>
-                <textarea type="text" id="messageInput" class="index-text-input" name="clientMessage" maxlength="250" placeholder="Deixe aqui sua crítica/sugestão sobre nosso estabelecimento"></textarea>
+                <textarea type="text" id="messageInput" class="index-text-input select-disable" name="clientMessage" maxlength="250" placeholder="Deixe aqui sua crítica/sugestão sobre nosso estabelecimento"></textarea>
                 <p id="errorText">.</p>
                 <div class="btn-container"><input id="submitBtn" class="index-submit-btn" type="button" value="Enviar"></div>
             </form>

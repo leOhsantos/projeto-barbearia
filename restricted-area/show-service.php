@@ -15,12 +15,12 @@ $stmt = $service->list();
         <form id="form" class="form" method="post" action="crud-service.php" enctype="multipart/form-data">
             <input type="hidden" name="serviceId" value="<?php echo @$_GET['serviceId'] ?>">
             <label for="nameInput">Digite o nome do serviço:</label>
-            <input type="text" id="nameInput" class="rt-text-input" name="serviceName" maxlength="40" placeholder="Nome do serviço">
+            <input type="text" id="nameInput" class="rt-text-input select-disable" name="serviceName" maxlength="40" placeholder="Nome do serviço">
             <label for="descInput">Digite a descrição do serviço:</label>
-            <input type="text" id="descInput" class="rt-text-input" name="serviceDesc" maxlength="80" placeholder="Descrição do serviço">
+            <input type="text" id="descInput" class="rt-text-input select-disable" name="serviceDesc" maxlength="80" placeholder="Descrição do serviço">
             <label for="imgInput" style="display: block;">Envie uma imagem do serviço:</label>
             <div class="send-img-container">
-                <label for="imgInput" id="imgLabel" class="img-input">
+                <label for="imgInput" id="imgLabel" class="img-input select-disable">
                     <h6 id="textLabel">Clique aqui para enviar a imagem</h6><img id="img" src="" onerror="this.style.display='none'">
                 </label>
                 <input hidden type="file" accept=".jpg, .png" id="imgInput" class="rt-text-input" name="serviceImg">
@@ -39,7 +39,7 @@ $stmt = $service->list();
         <div class="img-col">
             <?php foreach ($stmt as $row) { ?>
                 <div class="img-container">
-                    <img src="img/service-img/<?php echo $row[3] ?>" alt="Imagem do serviço" class="img">
+                    <img src="img/service-img/<?php echo $row[3] ?>" alt="Imagem do serviço" class="img select-disable">
                     <p class="img-name"><?php echo $row[2] ?></p>
                     <p><?php echo $row[1] ?></p>
                     <div class="btn-container">
@@ -74,12 +74,12 @@ $stmt = $service->list();
                                         <div class="modal-body modal-body-edit">
                                             <input type="hidden" id="serviceId" class="form-control id-input" name="serviceId">
                                             <label for="nameInput" class="col-form-label">Nome:</label>
-                                            <input type="text" id="nameInput" class="form-control name-input" name="serviceName" maxlength="40">
+                                            <input type="text" id="nameInput" class="form-control name-input select-disable" name="serviceName" maxlength="40">
                                             <label for="descInput" class="col-form-label">Descrição:</label>
-                                            <input type="text" id="descInput" class="form-control desc-input" name="serviceDesc" maxlength="80">
+                                            <input type="text" id="descInput" class="form-control desc-input select-disable" name="serviceDesc" maxlength="80">
                                             <label for="imgInput2" class="col-form-label" style="display: block;">Envie uma imagem do serviço:</label>
                                             <div class="send-img-container">
-                                                <label for="imgInput2" class="img-input">
+                                                <label for="imgInput2" class="img-input select-disable">
                                                     <h6 id="textLabel" class="text-label">Clique aqui para enviar a imagem</h6><img id="img" class="img" src="" onerror="this.style.display='none'">
                                                 </label>
                                                 <input hidden type="file" accept=".jpg, .png" id="imgInput2" class="service-img-input" name="serviceImg">
