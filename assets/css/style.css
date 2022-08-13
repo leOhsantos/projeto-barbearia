@@ -76,11 +76,12 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
+  border-radius: 5px;
+  transition: .4s;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
   background-color: #934a4e;
-  transition: 0.7s;
   cursor: pointer;
 }
 
@@ -208,6 +209,7 @@ footer h6 a:hover {
   border-style: none;
   box-shadow: 8px 8px 12px #000;
   border: 1px solid #fff;
+  transition: .4s;
 }
 
 .submit-login-btn {
@@ -220,6 +222,7 @@ footer h6 a:hover {
   margin-bottom: 19px;
   border-radius: 50px;
   border: 1px solid #000;
+  transition: .4s;
 }
 
 #backButton {
@@ -232,13 +235,13 @@ footer h6 a:hover {
   border-radius: 50%;
   border: 1px solid #000;
   margin-top: 30px;
+  transition: .4s;
 }
 
 .submit-login-btn:hover,
 #backButton:hover {
   background-color: #fff;
   color: #000;
-  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -283,6 +286,7 @@ label {
   border-radius: 15px;
   box-shadow: 0px 0px 3px #000;
   border: 1px solid #fff;
+  transition: .4s;
 }
 
 .form-control:focus {
@@ -334,6 +338,7 @@ label {
   border-radius: 15px;
   border: 1px solid #fff;
   cursor: pointer;
+  transition: .4s;
 }
 
 .img-input img {
@@ -406,6 +411,7 @@ textarea {
   border-radius: 50px;
   border-style: none;
   border: 1px solid #fff;
+  transition: .4s;
 }
 
 .btn-container {
@@ -423,7 +429,6 @@ textarea {
 .img-input:hover {
   background-color: #000;
   color: #fff;
-  transition: 0.3s;
   border: 1px solid #fff;
   cursor: pointer;
 }
