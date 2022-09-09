@@ -2,21 +2,27 @@
 include_once("validate-sentinel.php");
 require_once("../class/Scheduling.php");
 
+$scheduleId = $_POST["scheduleId"];
+$scheduleDate = $_POST["scheduleDate"];
+$scheduleHour = $_POST["scheduleHour"];
+$clientId = $_POST["clientId"];
+$serviceId = $_POST["serviceId"];
+
 $schedule = new Scheduling();
 $client = new Client();
 $service = new Service();
 
-$schedule->setScheduleId($_POST["scheduleId"]);
-$schedule->setScheduleDate($_POST["scheduleDate"]);
-$schedule->setScheduleHour($_POST["scheduleHour"]);
-$client->setClientId($_POST["clientId"]);
-$service->setServiceId($_POST["serviceId"]);
+$schedule->setScheduleId($scheduleId);
+$schedule->setScheduleDate($scheduleDate);
+$schedule->setScheduleHour($scheduleHour);
+$client->setClientId($clientId);
+$service->setServiceId($serviceId);
 $schedule->setClient($client);
 $schedule->setService($service);
 
-if (empty($_POST["scheduleId"]) && !empty($_POST["scheduleDate"]) && !empty($_POST["scheduleHour"]) && !empty($_POST["clientId"]) && !empty($_POST["serviceId"])) {
+if (empty($scheduleId) && !empty($scheduleDate) && !empty($scheduleHour) && !empty($clientId) && !empty($serviceId)) {
     echo $schedule->register($schedule);
-} else if (!empty($_POST["scheduleId"])) {
+} else if (!empty($scheduleId) && !empty($scheduleDate) && !empty($scheduleHour) && !empty($clientId) && !empty($serviceId)) {
     echo $schedule->edit($schedule);
 } else {
     $schedule->setScheduleId($_GET['scheduleId']);

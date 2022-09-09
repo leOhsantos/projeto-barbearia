@@ -115,7 +115,6 @@ if (editServiceModal) {
     editServiceModal.addEventListener("input", () => {
         const nameInput = editServiceModal.querySelector(".name-input"),
             descInput = editServiceModal.querySelector(".desc-input"),
-            imgInput = editServiceModal.querySelector(".service-img-input"),
             submitBtn = editServiceModal.querySelector(".submit-btn");
 
         if (nameInput.value === "") {
@@ -132,11 +131,7 @@ if (editServiceModal) {
             descInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         }
 
-        if (imgInput.value === "") {
-            submitBtn.setAttribute("type", "button");
-        }
-
-        if (nameInput.value !== "" && descInput.value !== "" && imgInput.value !== "") {
+        if (nameInput.value !== "" && descInput.value !== "") {
             submitBtn.setAttribute("type", "submit");
         }
     });

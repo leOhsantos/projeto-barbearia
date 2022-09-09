@@ -76,6 +76,16 @@ class Service
         $stmt->execute();
     }
 
+    public function editWithoutImg($service)
+    {
+        $connection = Connection::connect();
+        $stmt = $connection->prepare("UPDATE servicetb SET serviceDesc = ?, serviceName = ? WHERE serviceId = ?");
+        $stmt->bindValue(1, $service->getServiceDesc());
+        $stmt->bindValue(2, $service->getServiceName());
+        $stmt->bindValue(3, $service->getServiceId());
+        $stmt->execute();
+    }
+
     public function list()
     {
         $connection = Connection::connect();

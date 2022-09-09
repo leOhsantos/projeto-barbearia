@@ -76,6 +76,16 @@ class Product
         $stmt->execute();
     }
 
+    public function editWithoutImg($product)
+    {
+        $connection = Connection::connect();
+        $stmt = $connection->prepare("UPDATE producttb SET productDesc = ?, productName = ? WHERE productId = ?");
+        $stmt->bindValue(1, $product->getProductDesc());
+        $stmt->bindValue(2, $product->getProductName());
+        $stmt->bindValue(3, $product->getProductId());
+        $stmt->execute();
+    }
+
     public function list()
     {
         $connection = Connection::connect();

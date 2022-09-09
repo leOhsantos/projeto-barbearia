@@ -116,7 +116,6 @@ if (editProductModal) {
     editProductModal.addEventListener("input", () => {
         const nameInput = editProductModal.querySelector(".name-input"),
             descInput = editProductModal.querySelector(".desc-input"),
-            imgInput = editProductModal.querySelector(".product-img-input"),
             submitBtn = editProductModal.querySelector(".submit-btn");
 
         if (nameInput.value === "") {
@@ -133,11 +132,7 @@ if (editProductModal) {
             descInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         }
 
-        if (imgInput.value === "") {
-            submitBtn.setAttribute("type", "button");
-        }
-
-        if (nameInput.value !== "" && descInput.value !== "" && imgInput.value !== "") {
+        if (nameInput.value !== "" && descInput.value !== "") {
             submitBtn.setAttribute("type", "submit");
         }
     });
