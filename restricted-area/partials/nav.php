@@ -1,29 +1,28 @@
 <header>
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="barbershop-name">Na Régua Barbershop</div>
+        <img src="../assets/img/barbershop-logo.png" alt="Logo Na Regua Barbershop" class="barbershop-logo select-disable">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="menu collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav select-disable">
                 <li class="nav-item">
-                    <a class="nav-link" href="show-scheduling.php">Agendamentos</a>
+                    <a class="bottom-animation" href="show-scheduling.php">Agendamentos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="show-client.php">Clientes</a>
+                    <a class="bottom-animation" href="show-client.php">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="show-service.php">Serviços</a>
+                    <a class="bottom-animation" href="show-service.php">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="show-product.php">Produtos</a>
+                    <a class="bottom-animation" href="show-product.php">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="show-message.php">Mensagens</a>
+                    <a class="bottom-animation" href="show-message.php">Mensagens</a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Sair</a>
-
+                    <a type="button" class="bottom-animation" data-bs-toggle="modal" data-bs-target="#exampleModal">Sair</a>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">

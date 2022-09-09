@@ -52,10 +52,10 @@ const removeError = () => {
 const eyeClick = () => {
     if (passwordInput.type === "password") {
         passwordInput.setAttribute("type", "text");
-        eyeButton.textContent = "visibility";
+        eyeButton.textContent = "visibility_off";
     } else {
         passwordInput.setAttribute("type", "password");
-        eyeButton.textContent = "visibility_off";
+        eyeButton.textContent = "visibility";
     }
 }
 

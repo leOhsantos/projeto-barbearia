@@ -1,12 +1,15 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family: sans-serif;
-  color: #fff;
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  font-family: 'Roboto', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -14,13 +17,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #353535;
+  background: rgb(232, 232, 232);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #090808;
+  background-color: #2a2828;
   border-radius: 20px;
-  border: 3px solid #353535;
+  border: 3px solid rgb(232, 232, 232);
 }
 
 .select-disable {
@@ -32,17 +35,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .index-bg {
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.8) 100%),
-    url("../img/bg-2.png");
+  background-color: rgb(218, 218, 218);
 }
 
 .index-header {
   background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.8) 100%),
-    url("../img/bg.jpg");
+    url("../img/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,39 +50,62 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-  background-color: #6d0a0e;
-  padding: 22px;
+  display: flex;
+  background-color: rgba(109, 10, 14, 0.7);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 1vh 10vw 1vh 10vw;
 }
 
-.barbershop-name {
-  margin-left: 40px;
+.barbershop-logo {
   margin-bottom: 0;
-  font-family: "Lora", serif;
-  font-size: 21px;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  width: 200px;
+  cursor: pointer;
 }
 
-.navbar .menu {
-  justify-content: flex-end;
-}
-
-.navbar-nav .nav-item .nav-link {
-  all: unset;
+.nav-item {
   padding: 22px;
+  margin-left: 10px;
+}
+
+.nav-item a {
   font-size: 15px;
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
-  border-radius: 5px;
+  border-radius: 20%;
   transition: .4s;
+  cursor: pointer;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-  background-color: #934a4e;
-  cursor: pointer;
+.bottom-animation::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transform: skew(-50deg);
+  transition: width .3s;
+  border-radius: 25px;
+  margin-top: 2px;
+}
+
+.bottom-animation:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: unset;
+  padding-left: unset;
+}
+
+.menu {
+  margin-left: 10vw;
+  justify-content: flex-end;
 }
 
 .container-logo {
@@ -91,17 +114,19 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   height: 98vh;
+  color: #fff;
 }
 
 .container-logo h3 {
   font-size: 23px;
-  font-family: "Lora", serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   margin-bottom: 3px;
 }
 
 .logo {
-  max-width: 46vh;
+  width: 70vh;
+  margin-bottom: 30px;
 }
 
 .restricted-area {
@@ -111,6 +136,7 @@ body::-webkit-scrollbar-thumb {
       rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.7) 100%),
     url("../img/bg-2.png");
+  color: #fff;
 }
 
 footer {
@@ -120,7 +146,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 70px;
-  background-color: #000;
+  background-color: #6d0a0e;
 }
 
 footer h6 {
@@ -130,6 +156,7 @@ footer h6 {
   text-transform: uppercase;
 }
 
+footer h6,
 footer h6 a {
   text-align: center;
   font-size: 10px;
@@ -157,9 +184,9 @@ footer h6 a:hover {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%),
-    url("../img/login-bg.png");
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.7) 100%),
+    url("../img/bg.png");
   background-size: cover;
 }
 
@@ -172,14 +199,24 @@ footer h6 a:hover {
   border-radius: 10px;
 }
 
-.title {
+.title-login {
   color: #000;
   font-size: 23px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Lora", serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.title-login::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+  margin: 5px 0 0 25%;
 }
 
 #errorText {
@@ -206,8 +243,6 @@ footer h6 a:hover {
   width: 500px;
   padding: 15px;
   border-radius: 50px;
-  border-style: none;
-  box-shadow: 8px 8px 12px #000;
   border: 1px solid #fff;
   transition: .4s;
 }
@@ -274,19 +309,17 @@ label {
 
 .password-container {
   width: 100%;
-  display: flex;
+  position: relative;
 }
 
 .material-symbols-outlined {
-  margin-top: 12px;
-  margin-left: 5px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
   color: #000;
-  background-color: #fff;
   padding: 7px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 3px #000;
-  border: 1px solid #fff;
   transition: .4s;
+  cursor: pointer;
 }
 
 .form-control:focus {
@@ -308,10 +341,9 @@ label {
 .index-text-input {
   margin-top: 31px;
   padding: 9px;
-  border-style: none;
   border-radius: 15px;
+  border: none;
   width: 500px;
-  box-shadow: 8px 8px 12px #000;
 }
 
 .modal .img-input {
@@ -397,6 +429,7 @@ select {
 
 textarea {
   height: 150px;
+  resize: none;
 }
 
 .white-submit-btn {
@@ -405,9 +438,9 @@ textarea {
   cursor: pointer;
   margin-left: 3px;
   margin-right: 3px;
-  padding: 15px;
-  padding-left: 31px;
-  padding-right: 31px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   border-radius: 50px;
   border-style: none;
   border: 1px solid #fff;
@@ -424,10 +457,9 @@ textarea {
 }
 
 .index-submit-btn:hover,
-.material-symbols-outlined:hover,
 .white-submit-btn:hover,
 .img-input:hover {
-  background-color: #000;
+  background-color: #2a2828;
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
@@ -488,7 +520,7 @@ td {
 
 #service,
 #product {
-  padding-top: 30px;
+  padding-top: 65px;
 }
 
 #contactUs {
@@ -503,19 +535,28 @@ td {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-h2 {
+.title-section {
+  color: #000;
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 1px;
+  font-weight: bolder;
+  position: relative;
 }
 
-.index-hr {
-  margin-top: 6px;
-  width: 80px;
+.title-section::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10%;
+  bottom: -4px;
+  width: 80%;
   height: 1px;
   background-color: #ff0008;
+  align-items: center;
 }
 
 .img-col {
@@ -528,11 +569,21 @@ h2 {
   justify-content: center;
   text-align: center;
   width: 280px;
-  background-color: #fff;
   padding-bottom: 10px;
-  margin: 31px 36px 20px 36px;
+  margin: 31px 40px 20px 40px;
   border-radius: 15px;
-  box-shadow: 8px 8px 12px #000;
+}
+
+.restricted-img-container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 280px;
+  padding-bottom: 10px;
+  margin: 31px 40px 20px 40px;
+  border-radius: 15px;
+  background-color: #fff;
 }
 
 /* index cards transition */
@@ -545,8 +596,7 @@ body[data-aos-duration="400"] [data-aos] {
   width: 280px;
   height: 250px;
   margin-bottom: 5px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 14px;
 }
 
 .img-name {
@@ -584,6 +634,10 @@ p {
   margin-right: 5px;
 }
 
+.modal {
+  height: unset;
+}
+
 .modal-backdrop {
   z-index: unset;
 }
@@ -609,34 +663,49 @@ p {
 
   html,
   body {
-    scroll-padding-top: 170px;
+    scroll-padding-top: 40vh;
   }
 
   .navbar {
     padding: 12px;
   }
 
-  nav .menu {
+  .menu {
+    margin-left: 0;
     justify-content: flex-start;
   }
 
-  .barbershop-name {
-    font-size: 16px;
+  .barbershop-logo {
+    width: 170px;
     margin-left: 6px;
   }
 
-  .navbar-nav .nav-item .nav-link {
-    padding: 1px;
+  .nav-item {
+    padding: 10px 0 10px 0;
+    margin: 0 0 10px 0;
+    text-align: center;
   }
 
-  .menu ul {
-    margin-left: 14px;
+  .bottom-animation::after {
+    all: unset;
+  }
+
+  .bottom-animation:hover::after {
+    all: unset;
+  }
+
+  .nav-link {
+    padding: 1px;
   }
 
   .container-logo h3 {
     font-size: 17px;
     margin-left: 2px;
     margin-right: 2px;
+  }
+
+  .logo {
+    width: 48vh;
   }
 
   .user-bg {
@@ -721,6 +790,10 @@ p {
   .message-container {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .restricted-img-container {
+    margin: 31px 0 20px 0;
   }
 
   footer h6 {

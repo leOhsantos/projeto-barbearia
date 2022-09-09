@@ -18,10 +18,8 @@ $stmt2 = $product->list();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/img/logo.png">
     <title>Na Régua Barbershop</title>
 </head>
 
@@ -29,30 +27,30 @@ $stmt2 = $product->list();
 
     <header id="home" class="index-header">
         <nav class="navbar navbar-expand-lg fixed-top">
-            <h2 class="barbershop-name">Na Régua Barbershop</h2>
+            <a href="#home"><img src="assets/img/barbershop-logo.png" alt="Logo Na Regua Barbershop" class="barbershop-logo select-disable"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarNavDropdown" class="menu collapse navbar-collapse">
                 <ul class="navbar-nav select-disable">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="bottom-animation" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Serviços</a>
+                        <a class="bottom-animation" href="#service">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#product">Produtos</a>
+                        <a class="bottom-animation" href="#product">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contactUs">Fale Conosco</a>
+                        <a class="bottom-animation" href="#contactUs">Fale Conosco</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <div class="container-logo">
-            <img src="assets/img/logo.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__fadeInDown">
+            <img src="assets/img/barbershop-logo.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__fadeInDown">
             <h3 class="animate__animated animate__fadeInLeft">Tá afim de dar um trato no seu visual? Cola aqui!<br>
                 Rua Borboletas Psicodélicas Nº665 - São Paulo</h3>
         </div>
@@ -61,8 +59,7 @@ $stmt2 = $product->list();
     <main>
         <section id="service" class="container">
             <div class="title-container" data-aos="fade-up">
-                <h2>Nossos Serviços</h2>
-                <div class="index-hr"></div>
+                <h2 class="title-section">Nossos Serviços</h2>
             </div>
             <div class="img-col">
                 <?php
@@ -78,8 +75,7 @@ $stmt2 = $product->list();
 
         <section id="product" class="container">
             <div class="title-container" data-aos="fade-up">
-                <h2>Nossos Produtos</h2>
-                <div class="index-hr"></div>
+                <h2 class="title-section">Nossos Produtos</h2>
             </div>
             <div class="img-col">
                 <?php
@@ -94,8 +90,7 @@ $stmt2 = $product->list();
         </section>
 
         <section id="contactUs" data-aos="fade-up">
-            <h2>Fale Conosco!</h2>
-            <div class="index-hr"></div>
+            <h2 class="title-section">Fale Conosco!</h2>
             <form id="form" class="form" method="post" action="restricted-area/crud-message.php">
                 <label for="emailInput">Digite seu endereço de e-mail:</label>
                 <input type="email" id="emailInput" class="index-text-input select-disable" name="clientEmail" maxlength="60" placeholder="exemplo123@gmail.com">

@@ -38,7 +38,7 @@ $stmt = $service->list();
         <div class="form-hr"></div>
         <div class="img-col">
             <?php foreach ($stmt as $row) { ?>
-                <div class="img-container">
+                <div class="restricted-img-container">
                     <img src="img/service-img/<?php echo $row[3] ?>" alt="Imagem do serviço" class="img select-disable">
                     <p class="img-name"><?php echo $row[2] ?></p>
                     <p><?php echo $row[1] ?></p>

@@ -9,7 +9,7 @@ const validateFields = () => {
         emailTest = regex.test(emailInput.value);
 
     if (emailInput.value === "" || messageInput.value === "") {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;" + "text-shadow: 1px 1px 1px #000;";
+        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         errorText.textContent = "Preencha todos os campos!";
         emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         messageInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
@@ -22,7 +22,7 @@ const validateFields = () => {
             messageInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         }
     } else if (emailTest === false) {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;" + "text-shadow: 1px 1px 1px #000;";
+        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         errorText.textContent = "Endereço de e-mail inválido!";
         emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
     }
