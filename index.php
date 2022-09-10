@@ -108,8 +108,9 @@ $stmt2 = $product->list();
         </section>
     </main>
 
-    <footer>
-        <h6><a href="user-login.php">Área do Profissional</a></h6>
+    <footer class="footer">
+        <h6>✯ <a href="user-login.php">Área do Profissional</a> ✯</h6>
+        <h6><a target="_blank" href="http://www.freepik.com">Images by macrovector / Freepik</a></h6>
         <h6>© 2021 Copyright - Na Régua Barbershop</h6>
     </footer>
 

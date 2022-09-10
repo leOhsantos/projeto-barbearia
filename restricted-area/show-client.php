@@ -74,13 +74,13 @@ $stmt = $client->list();
                                         </div>
                                         <form id="form" method="post" action="crud-client.php">
                                             <div class="modal-body modal-body-edit">
-                                                <input type="hidden" class="form-control id-input" name="clientId">
+                                                <input type="hidden" class="id-input" name="clientId">
                                                 <label for="inputName" class="col-form-label">Nome:</label>
-                                                <input type="text" id="inputName" class="form-control name-input select-disable" name="clientName" maxlength="60">
+                                                <input type="text" id="inputName" class="text-input-modal name-input select-disable" name="clientName" maxlength="60">
                                                 <label for="emailInput" class="col-form-label">Endereço de e-mail:</label>
-                                                <input type="text" id="emailInput" class="form-control email-input select-disable" name="clientEmail" maxlength="60">
+                                                <input type="text" id="emailInput" class="text-input-modal email-input select-disable" name="clientEmail" maxlength="60">
                                                 <label for="phoneInput" class="col-form-label">Número de contato:</label>
-                                                <input type="text" id="phoneInput" class="form-control phone-input select-disable" name="clientPhone" maxlength="15">
+                                                <input type="text" id="phoneInput" class="text-input-modal phone-input select-disable" name="clientPhone" maxlength="15">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
@@ -100,7 +100,7 @@ $stmt = $client->list();
 
 </main>
 
-<footer>
+<footer class="footer">
     <h6>Modo Administrador - Clientes</h6>
     <h6>© 2021 Copyright - Na Régua Barbershop</h6>
 </footer>

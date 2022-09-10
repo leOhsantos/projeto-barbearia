@@ -207,33 +207,32 @@ a {
   color: #000;
 }
 
-footer {
+.footer {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  padding: 15px;
   background-color: rgba(109, 10, 14, 0.9);
   z-index: 1;
 }
 
-footer h6 {
+.footer h6 {
   font-size: 10px;
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 4px 0 4px 0;
   text-transform: uppercase;
 }
 
-footer h6,
-footer h6 a {
+.footer h6,
+.footer h6 a {
   text-align: center;
   font-size: 10px;
   color: #fff;
   text-decoration: none;
 }
 
-footer h6 a:hover {
+.footer h6 a:hover {
   color: #fff;
   text-decoration: underline;
   cursor: pointer;
@@ -393,18 +392,19 @@ label {
   font-size: 12px;
   margin-top: 12px;
   padding: 9px;
-  border-style: none;
+  border: 1px solid #fff;
   border-radius: 15px;
   width: 100%;
-  box-shadow: 0px 0px 2px #000;
+  transition: .4s;
 }
 
 .index-text-input {
   margin-top: 31px;
   padding: 9px;
+  border: 1px solid #fff;
   border-radius: 15px;
-  border: none;
   width: 500px;
+  transition: .4s;
 }
 
 .modal .img-input {
@@ -457,21 +457,26 @@ label {
 .rt-text-input {
   margin-top: 31px;
   padding: 9px;
-  border-style: none;
+  border: 1px solid #fff;
   border-radius: 15px;
   width: 500px;
+  transition: .4s;
 }
 
-.index-text-input:focus {
-  outline: 0;
+.text-input-modal {
+  padding: 9px;
+  border: 1px solid #a9aaaf;
+  border-radius: 15px;
+  width: 100%;
+  transition: .4s;
 }
 
 .text-input:focus,
 .index-text-input:focus,
 .rt-text-input:focus,
+.text-input-modal:focus,
 select:focus {
-  box-shadow: 1px 1px 4px #000;
-  transition: 0.5s;
+  border: 1px solid #000;
   outline: 0;
 }
 
@@ -653,12 +658,6 @@ td {
 .modal-footer .btn,
 .restricted-img-container .btn {
   margin: 7px 5px 0 5px;
-}
-
-/* index cards transition */
-[data-aos][data-aos][data-aos-duration="400"],
-body[data-aos-duration="400"] [data-aos] {
-  transition-duration: .6s;
 }
 
 .img {
@@ -927,8 +926,7 @@ p {
   footer h6 {
     text-align: center;
     font-size: 10px;
-    margin: 0;
-    margin-bottom: 5px;
+    margin: 4px 0 4px 0;
     text-transform: uppercase;
   }
 }

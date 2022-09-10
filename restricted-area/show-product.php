@@ -69,11 +69,11 @@ $stmt = $product->list();
                                     </div>
                                     <form id="form" method="post" action="crud-product.php" enctype="multipart/form-data">
                                         <div class="modal-body modal-body-edit">
-                                            <input type="hidden" class="form-control id-input" name="productId">
+                                            <input type="hidden" class="id-input" name="productId">
                                             <label for="nameInput" class="col-form-label">Nome:</label>
-                                            <input type="text" id="nameInput" class="form-control name-input select-disable" name="productName" maxlength="40">
+                                            <input type="text" id="nameInput" class="text-input-modal name-input select-disable" name="productName" maxlength="40">
                                             <label for="descInput" class="col-form-label">Descrição:</label>
-                                            <input type="text" id="descInput" class="form-control desc-input select-disable" name="productDesc" maxlength="80">
+                                            <input type="text" id="descInput" class="text-input-modal desc-input select-disable" name="productDesc" maxlength="80">
                                             <label for="imgInput2" class="col-form-label" style="display: block;">Envie uma imagem do produto:</label>
                                             <div class="send-img-container">
                                                 <label for="imgInput2" class="img-input select-disable">
@@ -100,7 +100,7 @@ $stmt = $product->list();
 
 </main>
 
-<footer>
+<footer class="footer">
     <h6>Modo Administrador - Produtos</h6>
     <h6>© 2021 Copyright - Na Régua Barbershop</h6>
 </footer>

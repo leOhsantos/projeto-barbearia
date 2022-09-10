@@ -54,7 +54,7 @@ $stmt2 = $message->countMessagesNumber();
 
 </main>
 
-<footer>
+<footer class="footer">
     <h6>Modo Administrador - Mensagens</h6>
     <h6>© 2021 Copyright - Na Régua Barbershop</h6>
 </footer>
