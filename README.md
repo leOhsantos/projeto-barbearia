@@ -40,43 +40,43 @@
 
  - Página principal:
 
-<img src="assets/img/index.gif">
+<img src="assets/img/index.gif" width="100%">
 
 <br><br>
 
  - Página de login do administrador:
 
-<img src="assets/img/img-login.jpg">
+<img src="assets/img/img-login.JPG" width="100%">
 
 <br><br>
 
 - Páginas da área do administrador:
 
-<img src="assets/img/img-scheduling.jpg">
+<img src="assets/img/img-scheduling.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-client.jpg">
+<img src="assets/img/img-client.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-services.jpg">
+<img src="assets/img/img-services.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-services-2.jpg">
+<img src="assets/img/img-services-2.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-products.jpg">
+<img src="assets/img/img-products.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-products-2.jpg">
+<img src="assets/img/img-products-2.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-messages.jpg">
+<img src="assets/img/img-messages.JPG" width="100%">
 
 <br><br>
 
