@@ -13,7 +13,7 @@ const form = document.getElementById("form"),
 
 const validateFields = () => {
     if (nameInput.value === "" || descInput.value === "" || imgInput.value === "") {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;" + "text-shadow: 1px 1px 1px #000;";
+        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         errorText.textContent = "Preencha todos os campos!";
         nameInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         descInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";

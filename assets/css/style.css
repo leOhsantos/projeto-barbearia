@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 7vh;
 }
 
 body {
@@ -24,6 +24,34 @@ body::-webkit-scrollbar-thumb {
   background-color: #2a2828;
   border-radius: 20px;
   border: 3px solid rgb(232, 232, 232);
+}
+
+a {
+  text-decoration: none;
+}
+
+[data-anime] {
+  opacity: 0;
+  transition: .6s ease;
+  z-index: -1;
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+
+[data-anime="top"] {
+  transform: translate3d(0, -150px, 0);
+}
+
+[data-anime="left"] {
+  transform: translate3d(-150px, 0, 0);
+}
+
+[data-anime="bottom"] {
+  transform: translate3d(0, 60px, 0);
 }
 
 .select-disable {
@@ -63,7 +91,6 @@ body::-webkit-scrollbar-thumb {
 .barbershop-logo {
   margin-bottom: 0;
   width: 200px;
-  cursor: pointer;
 }
 
 .nav-item {
@@ -76,7 +103,6 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
-  border-radius: 20%;
   transition: .4s;
   cursor: pointer;
 }
@@ -113,8 +139,9 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 98vh;
+  height: 100vh;
   color: #fff;
+  position: relative;
 }
 
 .container-logo h3 {
@@ -129,14 +156,55 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 30px;
 }
 
+.see-more {
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #fff !important;
+}
+
+.arrow-animation {
+  -moz-animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-6px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 .restricted-area {
   padding-top: 11vh;
   flex: 1;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.7) 100%),
-    url("../img/bg-2.png");
-  color: #fff;
+  background-color: rgb(218, 218, 218);
+  color: #000;
 }
 
 footer {
@@ -146,7 +214,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 70px;
-  background-color: #6d0a0e;
+  background-color: rgba(109, 10, 14, 0.9);
+  z-index: 1;
 }
 
 footer h6 {
@@ -190,15 +259,6 @@ footer h6 a:hover {
   background-size: cover;
 }
 
-.login-hr {
-  margin-top: 6px;
-  margin-bottom: 50px;
-  width: 72px;
-  height: 2px;
-  background-color: #000;
-  border-radius: 10px;
-}
-
 .title-login {
   color: #000;
   font-size: 23px;
@@ -217,6 +277,7 @@ footer h6 a:hover {
   height: 2px;
   background-color: #000;
   margin: 5px 0 0 25%;
+  transform: skew(-60deg);
 }
 
 #errorText {
@@ -312,9 +373,9 @@ label {
   position: relative;
 }
 
-.material-symbols-outlined {
+.eye {
   position: absolute;
-  top: 10px;
+  top: 11px;
   right: 0px;
   color: #000;
   padding: 7px;
@@ -406,9 +467,10 @@ label {
 }
 
 .text-input:focus,
+.index-text-input:focus,
 .rt-text-input:focus,
 select:focus {
-  box-shadow: 1px 1px 10px #000;
+  box-shadow: 1px 1px 4px #000;
   transition: 0.5s;
   outline: 0;
 }
@@ -459,7 +521,7 @@ textarea {
 .index-submit-btn:hover,
 .white-submit-btn:hover,
 .img-input:hover {
-  background-color: #2a2828;
+  background-color: rgb(30, 30, 30);
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
@@ -480,13 +542,6 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.form-hr {
-  margin-top: 8px;
-  width: 58px;
-  height: 1px;
-  background-color: #ff0008;
 }
 
 .form {
@@ -547,15 +602,24 @@ td {
   position: relative;
 }
 
-.title-section::after {
+.restricted-title-section {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  position: relative;
+}
+
+.title-section::after,
+.restricted-title-section::after {
   content: '';
   display: block;
   position: absolute;
-  left: 10%;
-  bottom: -4px;
-  width: 80%;
-  height: 1px;
-  background-color: #ff0008;
+  left: 19%;
+  bottom: -5px;
+  width: 64%;
+  height: 2px;
+  transform: skew(-60deg);
+  background-color: #a93a3e;
   align-items: center;
 }
 
@@ -584,6 +648,11 @@ td {
   margin: 31px 40px 20px 40px;
   border-radius: 15px;
   background-color: #fff;
+}
+
+.modal-footer .btn,
+.restricted-img-container .btn {
+  margin: 7px 5px 0 5px;
 }
 
 /* index cards transition */
@@ -618,6 +687,7 @@ p {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   text-align: center;
   width: 280px;
   height: 226px;
@@ -625,7 +695,9 @@ p {
   padding-bottom: 10px;
   margin: 18px 36px 20px 36px;
   border-radius: 15px;
-  box-shadow: 8px 8px 12px #000;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .message-container p {
@@ -634,8 +706,18 @@ p {
   margin-right: 5px;
 }
 
+.modal-dialog {
+  height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .modal {
   height: unset;
+}
+
+.modal-content {
+  border-radius: 15px;
 }
 
 .modal-backdrop {
@@ -657,6 +739,48 @@ p {
   align-items: flex-start;
   flex-direction: column;
   white-space: normal;
+}
+
+.btn {
+  all: unset;
+  margin-top: 4px;
+  padding: 5px 13px 5px 13px;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #a93a3e;
+  border: 1px solid #a93a3e;
+  transition: .4s;
+}
+
+.btn-delete:hover {
+  color: #a93a3e;
+  background-color: #fff;
+}
+
+.btn-edit {
+  background-color: #5674ec;
+  border: 1px solid #5674ec;
+  transition: .4s;
+}
+
+.btn-edit:hover {
+  color: #5674ec;
+  background-color: #fff;
+}
+
+.btn-cancel {
+  background-color: #626366;
+  border: 1px solid #626366;
+  transition: .4s;
+}
+
+.btn-cancel:hover {
+  color: #626366;
+  background-color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -696,6 +820,10 @@ p {
 
   .nav-link {
     padding: 1px;
+  }
+
+  .container-logo {
+    height: 92vh;
   }
 
   .container-logo h3 {

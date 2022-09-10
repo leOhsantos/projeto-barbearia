@@ -11,7 +11,7 @@ const form = document.getElementById("form"),
 
 const validateFields = () => {
     if (clientInput.value == 0 || dateInput.value === "" || hourInput.value === "" || serviceInput.value == 0) {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;" + "text-shadow: 1px 1px 1px #000;";
+        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         errorText.textContent = "Preencha todos os campos!";
         clientInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         dateInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";

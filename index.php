@@ -18,7 +18,7 @@ $stmt2 = $product->list();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Na Régua Barbershop</title>
 </head>
@@ -50,21 +50,26 @@ $stmt2 = $product->list();
         </nav>
 
         <div class="container-logo">
-            <img src="assets/img/barbershop-logo.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__fadeInDown">
+            <img src="assets/img/barbershop-logo-2.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__fadeInDown">
             <h3 class="animate__animated animate__fadeInLeft">Tá afim de dar um trato no seu visual? Cola aqui!<br>
                 Rua Borboletas Psicodélicas Nº665 - São Paulo</h3>
+            <a href="#service">
+                <span class="see-more arrow-animation select-disable">Veja mais<br>
+                    <span class="material-symbols-outlined arrow arrow-animation">expand_more</span>
+                </span>
+            </a>
         </div>
     </header>
 
     <main>
         <section id="service" class="container">
-            <div class="title-container" data-aos="fade-up">
+            <div class="title-container" data-anime="top">
                 <h2 class="title-section">Nossos Serviços</h2>
             </div>
             <div class="img-col">
                 <?php
                 foreach ($stmt as $row) { ?>
-                    <div class="img-container" data-aos="fade-up">
+                    <div class="img-container" data-anime="left">
                         <img src="<?php echo "restricted-area/img/service-img/" . $row[3] ?>" alt="Imagem do produto" class="img select-disable">
                         <p class="img-name"><?php echo $row[2] ?></p>
                         <p><?php echo $row[1] ?></p>
@@ -74,13 +79,13 @@ $stmt2 = $product->list();
         </section>
 
         <section id="product" class="container">
-            <div class="title-container" data-aos="fade-up">
+            <div class="title-container" data-anime="top">
                 <h2 class="title-section">Nossos Produtos</h2>
             </div>
             <div class="img-col">
                 <?php
                 foreach ($stmt2 as $row) { ?>
-                    <div class="img-container" data-aos="fade-up">
+                    <div class="img-container" data-anime="left">
                         <img src="<?php echo "restricted-area/img/product-img/" . $row[3] ?>" alt="Imagem do produto" class="img select-disable">
                         <p class="img-name"><?php echo $row[2] ?></p>
                         <p><?php echo $row[1] ?></p>
@@ -89,7 +94,7 @@ $stmt2 = $product->list();
             </div>
         </section>
 
-        <section id="contactUs" data-aos="fade-up">
+        <section id="contactUs" data-anime="bottom">
             <h2 class="title-section">Fale Conosco!</h2>
             <form id="form" class="form" method="post" action="restricted-area/crud-message.php">
                 <label for="emailInput">Digite seu endereço de e-mail:</label>
@@ -109,12 +114,8 @@ $stmt2 = $product->list();
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="assets/js/index.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
 </body>
 
 </html>

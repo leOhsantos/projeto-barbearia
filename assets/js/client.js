@@ -15,7 +15,7 @@ const validateFields = () => {
         phoneTest = phoneRegex.test(phoneInput.value);
 
     if (nameInput.value === "" || emailInput.value === "" || phoneInput.value === "") {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;" + "text-shadow: 1px 1px 1px #000;";
+        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         errorText.textContent = "Preencha todos os campos!";
         nameInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
@@ -33,7 +33,7 @@ const validateFields = () => {
             phoneInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         }
     } else if (emailTest === false || phoneTest === false) {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;" + "text-shadow: 1px 1px 1px #000;";
+        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         errorText.textContent = "Preencha corretamente o(s) campo(s) acima!";
         emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         phoneInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
@@ -53,6 +53,9 @@ const validateFields = () => {
 }
 
 const removeError = () => {
+    let emailRegex = /\S+@\S+\.\S+/,
+        emailTest = emailRegex.test(emailInput.value);
+
     if (nameInput.value !== "" && emailInput.value !== "" && phoneInput.value !== "") {
         errorText.style.cssText = "visibility: hidden;";
     }
@@ -61,7 +64,7 @@ const removeError = () => {
         nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
     }
 
-    if (emailInput.value !== "") {
+    if (emailTest === true) {
         emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
     }
 

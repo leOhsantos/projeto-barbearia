@@ -34,8 +34,8 @@
                                     Tem certeza de que deseja sair do modo administrador?
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <a class="btn btn-danger" href="logout.php">Sair</a>
+                                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+                                    <a class="btn btn-delete" href="logout.php">Sair</a>
                                 </div>
                             </div>
                         </div>

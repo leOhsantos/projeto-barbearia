@@ -1,12 +1,25 @@
-const form = document.getElementById("form"),
+const target = document.querySelectorAll("[data-anime]"),
+    form = document.getElementById("form"),
     emailInput = document.getElementById("emailInput"),
     messageInput = document.getElementById("messageInput"),
     errorText = document.getElementById("errorText"),
     submitBtn = document.getElementById("submitBtn");
 
+const activateScroll = () => {
+    const windowTop = window.pageYOffset + (window.innerHeight * 0.96);
+
+    target.forEach(e => {
+        if (windowTop > e.offsetTop) {
+            e.classList.add("animate");
+        } else {
+            e.classList.remove("animate");
+        }
+    })
+}
+
 const validateFields = () => {
-    let regex = /\S+@\S+\.\S+/,
-        emailTest = regex.test(emailInput.value);
+    let emailRegex = /\S+@\S+\.\S+/,
+        emailTest = emailRegex.test(emailInput.value);
 
     if (emailInput.value === "" || messageInput.value === "") {
         errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
@@ -34,11 +47,14 @@ const validateFields = () => {
 }
 
 const removeError = () => {
+    let emailRegex = /\S+@\S+\.\S+/,
+        emailTest = emailRegex.test(emailInput.value);
+
     if (emailInput.value !== "" && messageInput.value !== "") {
         errorText.style.cssText = "visibility: hidden;";
     }
 
-    if (emailInput.value !== "") {
+    if (emailTest === true) {
         emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
     }
 
@@ -47,6 +63,7 @@ const removeError = () => {
     }
 }
 
+window.addEventListener("scroll", _.debounce(activateScroll, 80));
 form.addEventListener("submit", function (e) { e.preventDefault(); return false });
 emailInput.addEventListener("input", removeError);
 messageInput.addEventListener("input", removeError);
