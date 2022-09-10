@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2022 at 03:07 PM
+-- Generation Time: Sep 10, 2022 at 07:50 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -84,8 +84,7 @@ INSERT INTO `producttb` (`productId`, `productDesc`, `productName`, `productImg`
 (2, '3 Pomadas, 1 Pó modelador, 1 Grooming e 1 Shaving', 'Kit Monster', 'Kit Monstro Barbearia.jpg'),
 (3, 'Fixador capilar para penteados', 'Grooming', 'Grooming.jpg'),
 (4, 'Pomada capilar/barba de 50g. Possui toque seco e efeito mate', 'Pomada', 'Pomada.jpg'),
-(5, 'Deixa a barba e o cabelo hidratados com um brilho incrível', 'Condicionador', 'Condicionador.jpg'),
-(6, 'Ajuda no crescimento de barba, cabelo, bigode e sobrancelha', 'Turbodil', 'Turbodil.jpg');
+(5, 'Deixa a barba e o cabelo hidratados com um brilho incrível', 'Condicionador', 'Condicionador.jpg');
 
 -- --------------------------------------------------------
 
@@ -130,8 +129,7 @@ INSERT INTO `servicetb` (`serviceId`, `serviceDesc`, `serviceName`, `serviceImg`
 (2, 'Reparação e cortes na sobrancelha', 'Sobrancelha na navalha', 'Sobrancelha na navalha.jpg'),
 (3, 'Somos profissionais em aparar barba', 'Aparar Barba', 'Cortando barba.jpg'),
 (4, 'Hidratamos tanto barba quanto cabelo', 'Hidratação', 'Hidratação.jpg'),
-(5, 'Pintamos e estilizamos seu visual', 'Pintar cabelo/barba/sobrancelha', 'Pintando cabelo.jpg'),
-(6, 'Também temos a opção de depilação', 'Depilação', 'Depilação.jpg');
+(5, 'Pintamos e estilizamos seu visual', 'Pintar cabelo/barba/sobrancelha', 'Pintando cabelo.jpg');
 
 -- --------------------------------------------------------
 

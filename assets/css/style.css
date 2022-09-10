@@ -574,12 +574,12 @@ td {
 }
 
 #service,
-#product {
+#product,
+#contactUs {
   padding-top: 65px;
 }
 
 #contactUs {
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -791,12 +791,6 @@ td {
 }
 
 @media (max-width: 991px) {
-
-  html,
-  body {
-    scroll-padding-top: 40vh;
-  }
-
   .navbar {
     padding: 12px;
   }
@@ -835,12 +829,19 @@ td {
 
   .container-logo h3 {
     font-size: 17px;
-    margin-left: 2px;
-    margin-right: 2px;
+    padding: 0 12px 0 12px;
   }
 
   .logo {
     width: 48vh;
+  }
+
+  .header-text {
+    all: unset;
+  }
+
+  #contactUs {
+    height: 650px;
   }
 
   .user-bg {
@@ -931,7 +932,11 @@ td {
     margin: 31px 0 20px 0;
   }
 
-  footer h6 {
+  .index-bg .footer {
+    margin-top: -50px;
+  }
+
+  .footer h6 {
     text-align: center;
     font-size: 10px;
     margin: 4px 0 4px 0;

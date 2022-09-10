@@ -20,6 +20,7 @@ $stmt2 = $product->list();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/barbershop-icon.png">
     <title>Na Régua Barbershop</title>
 </head>
 
@@ -51,8 +52,8 @@ $stmt2 = $product->list();
 
         <div class="container-logo">
             <img src="assets/img/barbershop-logo-2.png" alt="Na Régua Barbershop Logo" class="logo select-disable animate__animated animate__fadeInDown">
-            <h3 class="animate__animated animate__fadeInLeft">Tá afim de dar um trato no seu visual? Cola aqui!<br>
-                Rua Borboletas Psicodélicas Nº665 - São Paulo</h3>
+            <h3 class="animate__animated animate__fadeInLeft"><p class="header-text">Tá afim de dar um trato no seu visual? Cola aqui!</p>
+                <p class="header-text">Rua Borboletas Psicodélicas Nº665 - São Paulo</p></h3>
             <a href="#service">
                 <span class="see-more arrow-animation select-disable">Veja mais<br>
                     <span class="material-symbols-outlined arrow arrow-animation">expand_more</span>
