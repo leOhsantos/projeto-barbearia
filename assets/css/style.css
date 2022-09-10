@@ -314,7 +314,7 @@ a {
   cursor: pointer;
   width: 100%;
   padding: 15px;
-  margin-bottom: 19px;
+  margin: 19px 0 19px 0;
   border-radius: 50px;
   border: 1px solid #000;
   transition: .4s;
@@ -359,7 +359,7 @@ label {
   display: flex;
   justify-content: flex-start;
   margin-bottom: -25px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .modal label {
@@ -374,7 +374,7 @@ label {
 
 .eye {
   position: absolute;
-  top: 11px;
+  top: 8px;
   right: 0px;
   color: #000;
   padding: 7px;
@@ -382,15 +382,9 @@ label {
   cursor: pointer;
 }
 
-.form-control:focus {
-  border: none;
-  outline: 0;
-  box-shadow: none;
-}
-
 .text-input {
   font-size: 12px;
-  margin-top: 12px;
+  margin-top: 8px;
   padding: 9px;
   border: 1px solid #fff;
   border-radius: 15px;
@@ -517,6 +511,7 @@ textarea {
 .btn-container {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .btn-container .btn {
@@ -607,11 +602,16 @@ td {
   position: relative;
 }
 
+.title-form {
+  margin-bottom: 20px;
+}
+
 .restricted-title-section {
   font-size: 25px;
   letter-spacing: 1px;
   font-weight: 500;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .title-section::after,
@@ -673,7 +673,7 @@ td {
   font-weight: bold;
 }
 
-p {
+.desc-text {
   all: unset;
   word-wrap: break-word;
   font-size: 14px;
@@ -772,14 +772,22 @@ p {
 }
 
 .btn-cancel {
-  background-color: #626366;
-  border: 1px solid #626366;
+  background-color: #76787d;
+  border: 1px solid #76787d;
   transition: .4s;
 }
 
 .btn-cancel:hover {
-  color: #626366;
+  color: #76787d;
   background-color: #fff;
+}
+
+.error-text {
+  font-size: 13px;
+  text-align: center;
+  color: rgb(218, 218, 218);
+  margin: 7px 0 0 0;
+  visibility: hidden;
 }
 
 @media (max-width: 991px) {

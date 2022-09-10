@@ -2,7 +2,9 @@ const form = document.getElementById("form"),
     nameInput = document.getElementById("nameInput"),
     emailInput = document.getElementById("emailInput"),
     phoneInput = document.getElementById("phoneInput"),
-    errorText = document.getElementById("errorText"),
+    nameErrorText = document.getElementsByClassName("error-text")[0],
+    emailErrorText = document.getElementsByClassName("error-text")[1],
+    phoneErrorText = document.getElementsByClassName("error-text")[2],
     submitBtn = document.getElementById("submitBtn"),
     resetBtn = document.getElementById("resetBtn"),
     deleteClientModal = document.getElementById("deleteClientModal"),
@@ -14,76 +16,70 @@ const validateFields = () => {
         phoneRegex = /^\(\d{2}\)\s\d{5}\-\d{4}/,
         phoneTest = phoneRegex.test(phoneInput.value);
 
-    if (nameInput.value === "" || emailInput.value === "" || phoneInput.value === "") {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
-        errorText.textContent = "Preencha todos os campos!";
+    if (nameInput.value === "" || emailTest === false || phoneTest === false) {
         nameInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        nameErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        emailErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         phoneInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        phoneErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
 
         if (nameInput.value !== "") {
             nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
-
-        if (emailInput.value !== "") {
-            emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
-        }
-
-        if (phoneInput.value !== "") {
-            phoneInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
-        }
-    } else if (emailTest === false || phoneTest === false) {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
-        errorText.textContent = "Preencha corretamente o(s) campo(s) acima!";
-        emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
-        phoneInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
 
         if (emailTest === true) {
             emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            emailErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
 
         if (phoneTest === true) {
             phoneInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            phoneErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
     }
 
     if (nameInput.value !== "" && emailTest === true && phoneTest === true) {
+        alert("Cliente registrado com sucesso!");
         form.submit();
     }
 }
 
 const removeError = () => {
     let emailRegex = /\S+@\S+\.\S+/,
-        emailTest = emailRegex.test(emailInput.value);
-
-    if (nameInput.value !== "" && emailInput.value !== "" && phoneInput.value !== "") {
-        errorText.style.cssText = "visibility: hidden;";
-    }
+        emailTest = emailRegex.test(emailInput.value),
+        phoneRegex = /^\(\d{2}\)\s\d{5}\-\d{4}/,
+        phoneTest = phoneRegex.test(phoneInput.value);
 
     if (nameInput.value !== "") {
         nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (emailTest === true) {
         emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        emailErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
-    if (phoneInput.value !== "") {
+    if (phoneTest === true) {
         phoneInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        phoneErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 }
 
 const resetFields = () => {
     nameInput.value = "";
     nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     emailInput.value = "";
     emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    emailErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     phoneInput.value = "";
     phoneInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
-
-    errorText.style.cssText = "visibility: hidden;";
+    phoneErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 }
 
 if (deleteClientModal) {
@@ -92,7 +88,10 @@ if (deleteClientModal) {
             recipient = button.getAttribute("data-bs-id"),
             deleteBtn = deleteClientModal.querySelector(".delete-btn");
 
-        deleteBtn.href = "crud-client.php?clientId=" + recipient;
+        deleteBtn.addEventListener("click", () => {
+            alert("Cliente excluído com sucesso!");
+            deleteBtn.href = "crud-client.php?clientId=" + recipient;
+        })
     })
 }
 
@@ -118,7 +117,8 @@ if (editClientModal) {
     })
 
     editClientModal.addEventListener("input", () => {
-        const nameInput = editClientModal.querySelector(".name-input"),
+        const formModal = editClientModal.querySelector("#formModal"),
+            nameInput = editClientModal.querySelector(".name-input"),
             emailInput = editClientModal.querySelector(".email-input"),
             phoneInput = editClientModal.querySelector(".phone-input"),
             submitBtn = editClientModal.querySelector(".submitBtn"),
@@ -149,7 +149,10 @@ if (editClientModal) {
         }
 
         if (nameInput.value !== "" && emailTest === true && phoneTest === true) {
-            submitBtn.setAttribute("type", "submit");
+            submitBtn.addEventListener("click", () => {
+                alert("Cliente editado com sucesso!");
+                formModal.submit();
+            })
         }
     })
 }

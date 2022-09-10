@@ -5,7 +5,9 @@ const form = document.getElementById("form"),
     textLabel = document.getElementById("textLabel"),
     imgLabel = document.getElementById("imgLabel"),
     img = document.getElementById("img"),
-    errorText = document.getElementById("errorText"),
+    nameErrorText = document.getElementsByClassName("error-text")[0],
+    descErrorText = document.getElementsByClassName("error-text")[1],
+    imgErrorText = document.getElementsByClassName("error-text")[2],
     submitBtn = document.getElementById("submitBtn"),
     resetBtn = document.getElementById("resetBtn"),
     deleteProductModal = document.getElementById("deleteProductModal"),
@@ -13,57 +15,66 @@ const form = document.getElementById("form"),
 
 const validateFields = () => {
     if (nameInput.value === "" || descInput.value === "" || imgInput.value === "") {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
-        errorText.textContent = "Preencha todos os campos!";
         nameInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        nameErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         descInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        descErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         imgLabel.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        imgErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
 
         if (nameInput.value !== "") {
             nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
 
         if (descInput.value !== "") {
             descInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            descErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
+        }
+
+        if (imgInput.value !== "") {
+            imgLabel.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            imgErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
     }
 
     if (nameInput.value !== "" && descInput.value !== "" && imgInput.value !== "") {
+        alert("Produto registrado com sucesso!");
         form.submit();
     }
 }
 
 const removeError = () => {
-    if (nameInput.value !== "" && descInput.value !== "" && imgInput.value !== "") {
-        errorText.style.cssText = "visibility: hidden;";
-    }
-
     if (nameInput.value !== "") {
         nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (descInput.value !== "") {
         descInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        descErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (imgInput.value !== "") {
         imgLabel.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        imgErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 }
 
 const resetFields = () => {
     nameInput.value = "";
     nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     descInput.value = "";
     descInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    descErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     imgInput.value = "";
     imgLabel.style.cssText = "background-color: none;" + "transition: .7s;";
+    imgErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     textLabel.textContent = "Clique aqui para enviar a imagem";
     img.setAttribute("src", "");
-
-    errorText.style.cssText = "visibility: hidden;";
 }
 
 if (deleteProductModal) {
@@ -72,7 +83,10 @@ if (deleteProductModal) {
             recipient = button.getAttribute("data-bs-id"),
             deleteBtn = deleteProductModal.querySelector(".delete-btn");
 
-        deleteBtn.href = "crud-product.php?productId=" + recipient;
+        deleteBtn.addEventListener("click", () => {
+            alert("Produto excluído com sucesso!");
+            deleteBtn.href = "crud-product.php?productId=" + recipient;
+        })
     });
 }
 
@@ -114,7 +128,8 @@ if (editProductModal) {
 
 
     editProductModal.addEventListener("input", () => {
-        const nameInput = editProductModal.querySelector(".name-input"),
+        const formModal = editProductModal.querySelector("#formModal"),
+            nameInput = editProductModal.querySelector(".name-input"),
             descInput = editProductModal.querySelector(".desc-input"),
             submitBtn = editProductModal.querySelector(".submit-btn");
 
@@ -133,7 +148,10 @@ if (editProductModal) {
         }
 
         if (nameInput.value !== "" && descInput.value !== "") {
-            submitBtn.setAttribute("type", "submit");
+            submitBtn.addEventListener("click", () => {
+                alert("Produto editado com sucesso!");
+                formModal.submit();
+            })
         }
     });
 }

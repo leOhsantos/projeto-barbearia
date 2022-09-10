@@ -33,10 +33,13 @@ $stmt5 = $service->list();
                 ?>
 
             </select>
+            <p class="error-text">Selecione um cliente.</p>
             <label for="dateInput">Agende a data:</label>
             <input type="date" id="dateInput" class="rt-text-input select-disable" name="scheduleDate">
+            <p class="error-text">Informe uma data.</p>
             <label for="hourInput">Agende a hora:</label>
             <input type="time" id="hourInput" class="rt-text-input select-disable" name="scheduleHour">
+            <p class="error-text">Informe a hora.</p>
             <label for="serviceInput">Selecione o serviço:</label>
             <select id="serviceInput" class="rt-text-input select-disable" name="serviceId">
                 <option value="0">Selecionar</option>
@@ -47,7 +50,7 @@ $stmt5 = $service->list();
                 ?>
 
             </select>
-            <p id="errorText">.</p>
+            <p class="error-text">Selecione um serviço.</p>
             <div class="btn-container">
                 <input id="resetBtn" class="white-submit-btn" type="reset" value="Limpar">
                 <input id="submitBtn" class="white-submit-btn" type="button" value="Salvar">
@@ -101,7 +104,7 @@ $stmt5 = $service->list();
                                             <h5 id="exampleModalLabel" class="modal-title">Editar agendamento</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <form id="form" method="post" action="crud-scheduling.php">
+                                        <form id="formModal" method="post" action="crud-scheduling.php">
                                             <div class="modal-body modal-body-edit">
                                                 <input type="hidden" class="id-input" name="scheduleId">
                                                 <label for="clientInput" class="col-form-label">Selecione o cliente:</label>

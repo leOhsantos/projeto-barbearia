@@ -2,7 +2,9 @@ const form = document.getElementById("form"),
     userInput = document.getElementById("userInput"),
     passwordInput = document.getElementById("passwordInput"),
     eyeButton = document.getElementsByTagName("span")[0],
-    errorText = document.getElementById("errorText"),
+    userErrorText = document.getElementsByClassName("error-text")[0],
+    passwordErrorText = document.getElementsByClassName("error-text")[1],
+    loginErrorText = document.getElementsByClassName("error-text")[2],
     submitBtn = document.getElementById("submitBtn"),
     backButton = document.getElementById("backButton"),
     previousUrl = document.referrer,
@@ -13,17 +15,19 @@ const validateFields = () => {
         passwordValue = passwordInput.value;
 
     if (userValue === "" || passwordValue === "") {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
-        errorText.textContent = "Preencha todos os campos!";
         userInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        userErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         passwordInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        passwordErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
 
         if (userValue !== "") {
             userInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            userErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
 
         if (passwordValue !== "") {
             passwordInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            passwordErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
     }
 
@@ -36,16 +40,14 @@ const removeError = () => {
     let userValue = userInput.value,
         passwordValue = passwordInput.value;
 
-    if (userValue !== "" && passwordValue !== "") {
-        errorText.style.cssText = "visibility: hidden;";
-    }
-
     if (userValue !== "") {
         userInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        userErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (passwordValue !== "") {
         passwordInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        passwordErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 }
 
@@ -60,8 +62,7 @@ const eyeClick = () => {
 }
 
 if (previousUrl === linkValidateUserLogin) {
-    errorText.style.cssText = "visibility: visible;" + "color: #e03333;";
-    errorText.textContent = "Nome de usuário ou senha incorretos!";
+    loginErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
 }
 
 document.addEventListener("keypress", () => {

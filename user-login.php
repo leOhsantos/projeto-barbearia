@@ -21,12 +21,14 @@
             <p class="user-login-text">Preencha os campos abaixo para acessar a Área do Profissional.</p>
             <form id="form" class="form" action="validate-user-login.php" method="post">
                 <input autofocus name="userLogin" id="userInput" class="text-input select-disable" type="text" placeholder="Nome de usuário" maxlength="40">
+                <p class="error-text">Digite um nome de usuário.</p>
                 <div class="password-container">
                     <input name="userPassword" id="passwordInput" class="text-input select-disable" type="password" placeholder="Senha" maxlength="128">
                     <span class="material-symbols-outlined eye select-disable">visibility</span>
                 </div>
-                <p id="errorText">.</p>
+                <p class="error-text">Digite uma senha.</p>
                 <input id="submitBtn" class="submit-login-btn" type="button" value="Entrar">
+                <p class="error-text">Nome de usuário ou senha incorretos!</p>
             </form>
             <div id="backButton"><span class="material-icons select-disable">arrow_back</span></div>
         </div>

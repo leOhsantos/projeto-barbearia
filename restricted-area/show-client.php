@@ -15,11 +15,13 @@ $stmt = $client->list();
             <input type="hidden" name="clientId" value="<?php echo @$_GET['clientId'] ?>">
             <label for="nameInput">Digite o nome do cliente:</label>
             <input autofocus type="text" id="nameInput" class="rt-text-input select-disable" name="clientName" maxlength="60" placeholder="ex.: Ednaldo Pereira">
+            <p class="error-text">Informe o nome do cliente.</p>
             <label for="emailInput">Digite o endereço de e-mail do cliente:</label>
             <input type="text" id="emailInput" class="rt-text-input select-disable" name="clientEmail" maxlength="60" placeholder="exemplo123@gmail.com">
+            <p class="error-text">Endereço de e-mail inválido.</p>
             <label for="phoneInput">Digite o número de contato do cliente:</label>
             <input type="text" id="phoneInput" class="rt-text-input select-disable" name="clientPhone" maxlength="15" placeholder="(xx) xxxxx-xxxx">
-            <p id="errorText">.</p>
+            <p class="error-text">Número de contato inválido.</p>
             <div class="btn-container">
                 <input id="resetBtn" class="white-submit-btn" type="reset" value="Limpar">
                 <input id="submitBtn" class="white-submit-btn" type="button" value="Salvar">
@@ -72,7 +74,7 @@ $stmt = $client->list();
                                             <h5 id="exampleModalLabel" class="modal-title">Editar cliente</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <form id="form" method="post" action="crud-client.php">
+                                        <form id="formModal" method="post" action="crud-client.php">
                                             <div class="modal-body modal-body-edit">
                                                 <input type="hidden" class="id-input" name="clientId">
                                                 <label for="inputName" class="col-form-label">Nome:</label>

@@ -3,7 +3,10 @@ const form = document.getElementById("form"),
     dateInput = document.getElementById("dateInput"),
     hourInput = document.getElementById("hourInput"),
     serviceInput = document.getElementById("serviceInput"),
-    errorText = document.getElementById("errorText"),
+    clientErrorText = document.getElementsByClassName("error-text")[0],
+    dateErrorText = document.getElementsByClassName("error-text")[1],
+    hourErrorText = document.getElementsByClassName("error-text")[2],
+    serviceErrorText = document.getElementsByClassName("error-text")[3],
     submitBtn = document.getElementById("submitBtn"),
     resetBtn = document.getElementById("resetBtn"),
     deleteSchedulingModal = document.getElementById("deleteSchedulingModal"),
@@ -11,71 +14,80 @@ const form = document.getElementById("form"),
 
 const validateFields = () => {
     if (clientInput.value == 0 || dateInput.value === "" || hourInput.value === "" || serviceInput.value == 0) {
-        errorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
-        errorText.textContent = "Preencha todos os campos!";
         clientInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        clientErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         dateInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        dateErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         hourInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        hourErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         serviceInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
+        serviceErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
 
         if (clientInput.value > 0) {
             clientInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            clientErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
 
         if (dateInput.value !== "") {
             dateInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            dateErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
 
         if (hourInput.value !== "") {
             hourInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            hourErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
 
         if (serviceInput.value > 0) {
             serviceInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+            serviceErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }
     }
 
     if (clientInput.value > 0 && dateInput.value !== "" && hourInput.value !== "" && serviceInput.value > 0) {
+        alert("Agendamento registrado com sucesso!");
         form.submit();
     }
 }
 
 const removeError = () => {
-    if (clientInput.value > 0 && dateInput.value !== "" && hourInput.value !== "" && serviceInput.value > 0) {
-        errorText.style.cssText = "visibility: hidden;";
-    }
-
     if (clientInput.value > 0) {
         clientInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        clientErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (dateInput.value !== "") {
         dateInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        dateErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (hourInput.value !== "") {
         hourInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        hourErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 
     if (serviceInput.value > 0) {
         serviceInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+        serviceErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
     }
 }
 
 const resetFields = () => {
     clientInput.value = 0;
     clientInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    clientErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     dateInput.value = "";
     dateInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    dateErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     hourInput.value = "";
     hourInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    hourErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 
     serviceInput.value = 0;
-    serviceInput.style.cssText = "background-color: #cecccc;" + "transition: .7s;";
-    
-    errorText.style.cssText = "visibility: hidden;";
+    serviceInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
+    serviceErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
 }
 
 if (deleteSchedulingModal) {
@@ -84,7 +96,10 @@ if (deleteSchedulingModal) {
             recipient = button.getAttribute("data-bs-id"),
             deleteBtn = deleteSchedulingModal.querySelector(".delete-btn");
 
-        deleteBtn.href = "crud-scheduling.php?scheduleId=" + recipient;
+        deleteBtn.addEventListener("click", () => {
+            alert("Agendamento excluído com sucesso!");
+            deleteBtn.href = "crud-scheduling.php?scheduleId=" + recipient;
+        })
     });
 }
 
@@ -99,7 +114,7 @@ if (editSchedulingModal) {
             dateInput = editSchedulingModal.querySelector(".date-input"),
             hourInput = editSchedulingModal.querySelector(".hour-input"),
             serviceInput = editSchedulingModal.querySelector(".service-input");
-            
+
         idInput.value = recipientId;
         clientInput.value = recipientClient;
         serviceInput.value = recipientService;
@@ -108,30 +123,34 @@ if (editSchedulingModal) {
     });
 
     editSchedulingModal.addEventListener("input", () => {
-        const clientInput = editSchedulingModal.querySelector(".client-input"),
+        const formModal = editSchedulingModal.querySelector("#formModal"),
+            clientInput = editSchedulingModal.querySelector(".client-input"),
             dateInput = editSchedulingModal.querySelector(".date-input"),
             hourInput = editSchedulingModal.querySelector(".hour-input"),
             serviceInput = editSchedulingModal.querySelector(".service-input"),
             submitBtn = editSchedulingModal.querySelector(".submitBtn");
 
-            if (clientInput.value == 0) {
-                submitBtn.setAttribute("type", "button");
-            }
+        if (clientInput.value == 0) {
+            submitBtn.setAttribute("type", "button");
+        }
 
-            if (dateInput.value === "") {
-                submitBtn.setAttribute("type", "button");
-            }
+        if (dateInput.value === "") {
+            submitBtn.setAttribute("type", "button");
+        }
 
-            if (hourInput.value === "") {
-                submitBtn.setAttribute("type", "button");
-            }
+        if (hourInput.value === "") {
+            submitBtn.setAttribute("type", "button");
+        }
 
-            if (serviceInput.value == 0) {
-                submitBtn.setAttribute("type", "button");
-            }
+        if (serviceInput.value == 0) {
+            submitBtn.setAttribute("type", "button");
+        }
 
         if (clientInput.value > 0 && dateInput.value !== "" && hourInput.value !== "" && serviceInput.value > 0) {
-            submitBtn.setAttribute("type", "submit");
+            submitBtn.addEventListener("click", () => {
+                alert("Agendamento editado com sucesso!");
+                formModal.submit();
+            })
         }
     });
 }

@@ -15,8 +15,10 @@ $stmt = $service->list();
             <input type="hidden" name="serviceId" value="<?php echo @$_GET['serviceId'] ?>">
             <label for="nameInput">Digite o nome do serviço:</label>
             <input autofocus type="text" id="nameInput" class="rt-text-input select-disable" name="serviceName" maxlength="40" placeholder="Nome do serviço">
+            <p class="error-text">Informe o nome do serviço.</p>
             <label for="descInput">Digite a descrição do serviço:</label>
             <input type="text" id="descInput" class="rt-text-input select-disable" name="serviceDesc" maxlength="80" placeholder="Descrição do serviço">
+            <p class="error-text">Informe a descrição do serviço.</p>
             <label for="imgInput" style="display: block;">Envie uma imagem do serviço:</label>
             <div class="send-img-container">
                 <label for="imgInput" id="imgLabel" class="img-input select-disable">
@@ -24,7 +26,7 @@ $stmt = $service->list();
                 </label>
                 <input hidden type="file" accept=".jpg, .png" id="imgInput" class="rt-text-input" name="serviceImg">
             </div>
-            <p id="errorText">.</p>
+            <p class="error-text">Envie uma imagem do serviço.</p>
             <div class="btn-container">
                 <input id="resetBtn" class="white-submit-btn" type="reset" value="Limpar">
                 <input id="submitBtn" class="white-submit-btn" type="button" value="Salvar">
@@ -39,7 +41,7 @@ $stmt = $service->list();
                 <div class="restricted-img-container">
                     <img src="img/service-img/<?php echo $row[3] ?>" alt="Imagem do serviço" class="img select-disable">
                     <p class="img-name"><?php echo $row[2] ?></p>
-                    <p><?php echo $row[1] ?></p>
+                    <p class="desc-text"><?php echo $row[1] ?></p>
                     <div class="btn-container">
                         <a type="button" class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#deleteServiceModal" data-bs-id="<?php echo $row[0] ?>">Excluir</a>
                         <div id="deleteServiceModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -67,7 +69,7 @@ $stmt = $service->list();
                                         <h5 id="exampleModalLabel" class="modal-title">Editar serviço</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form id="form" method="post" action="crud-service.php" enctype="multipart/form-data">
+                                    <form id="formModal" method="post" action="crud-service.php" enctype="multipart/form-data">
                                         <div class="modal-body modal-body-edit">
                                             <input type="hidden" id="serviceId" class="id-input" name="serviceId">
                                             <label for="nameInput" class="col-form-label">Nome:</label>
@@ -91,7 +93,6 @@ $stmt = $service->list();
                             </div>
                         </div>
                     </div>
-                    </p>
                 </div>
             <?php } ?>
         </div>
