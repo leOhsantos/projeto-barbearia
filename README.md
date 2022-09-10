@@ -87,21 +87,15 @@
 
  - Inserção de dados:
 
-    É possível registrar novos agendamentos de clientes, novos clientes, novos produtos e novos serviços.
-
-<br>
+    É possível agendar clientes, registrar novos clientes, novos produtos e novos serviços.
 
 - Alteração de dados:
   
     É possível fazer alterações nos agendamentos, clientes, produtos e serviços registrados.
 
-<br>
-
 - Exclusão de dados:
 
     É possível excluir os agendamentos, clientes, produtos, serviços e as mensagens de usuários que são enviadas ao administrador.
-
-<br>
 
 - Validações de formulários:
 
