@@ -83,9 +83,7 @@
 
 ## ⚙ Funcionalidades do sistema
 
-<br>
-
- - Inserção de dados:
+- Inserção de dados:
 
     É possível agendar clientes, registrar novos clientes, novos produtos e novos serviços.
 
