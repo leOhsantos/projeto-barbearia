@@ -112,8 +112,8 @@ $stmt2 = $product->list();
 
     <footer class="footer">
         <h6>✯ <a href="user-login.php">Área do Profissional</a> ✯</h6>
-        <h6>© 2021 Copyright - Na Régua Barbershop</h6>
         <h6><a target="_blank" href="http://www.freepik.com">Images by macrovector / Freepik</a></h6>
+        <h6>© 2021 Copyright - Na Régua Barbershop</h6>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
