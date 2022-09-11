@@ -511,6 +511,12 @@ textarea {
   text-transform: uppercase;
 }
 
+#contactUs .btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
 .column-1 .btn-container {
   display: flex;
   justify-content: center;
