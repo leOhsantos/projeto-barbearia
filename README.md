@@ -56,11 +56,11 @@
 
 <br>
 
-<img src="assets/img/img-services-2.JPG" width="100%">
+<img src="assets/img/img-services.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-products-2.JPG" width="100%">
+<img src="assets/img/img-products.JPG" width="100%">
 
 <br>
 
