@@ -44,31 +44,19 @@
 
 <br><br>
 
- - Página de login do administrador:
+ - Tela de login do administrador:
 
 <img src="assets/img/img-login.JPG" width="100%">
 
 <br><br>
 
-- Páginas da área do administrador:
-
-<img src="assets/img/img-scheduling.JPG" width="100%">
-
-<br>
+- Algumas telas da área do administrador:
 
 <img src="assets/img/img-client.JPG" width="100%">
 
 <br>
 
-<img src="assets/img/img-services.JPG" width="100%">
-
-<br>
-
 <img src="assets/img/img-services-2.JPG" width="100%">
-
-<br>
-
-<img src="assets/img/img-products.JPG" width="100%">
 
 <br>
 
