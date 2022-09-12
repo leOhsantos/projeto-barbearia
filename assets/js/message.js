@@ -9,6 +9,6 @@ if (deleteMessageModal) {
         deleteBtn.addEventListener("click", () => {
             alert("Mensagem excluída com sucesso!");
             deleteBtn.href = "crud-message.php?messageId=" + recipient;
-        })
+        });
     });
 }

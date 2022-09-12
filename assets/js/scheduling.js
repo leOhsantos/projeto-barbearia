@@ -99,7 +99,7 @@ if (deleteSchedulingModal) {
         deleteBtn.addEventListener("click", () => {
             alert("Agendamento excluído com sucesso!");
             deleteBtn.href = "crud-scheduling.php?scheduleId=" + recipient;
-        })
+        });
     });
 }
 
@@ -150,7 +150,7 @@ if (editSchedulingModal) {
             submitBtn.addEventListener("click", () => {
                 alert("Agendamento editado com sucesso!");
                 formModal.submit();
-            })
+            });
         }
     });
 }

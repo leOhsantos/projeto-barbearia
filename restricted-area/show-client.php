@@ -20,7 +20,7 @@ $stmt = $client->list();
             <input type="text" id="emailInput" class="rt-text-input select-disable" name="clientEmail" maxlength="60" placeholder="exemplo123@gmail.com">
             <p class="error-text">Endereço de e-mail inválido.</p>
             <label for="phoneInput">Digite o número de contato do cliente:</label>
-            <input type="text" id="phoneInput" class="rt-text-input select-disable" name="clientPhone" maxlength="15" placeholder="(xx) xxxxx-xxxx">
+            <input type="text" id="phoneInput" class="rt-text-input select-disable" name="clientPhone" maxlength="15" placeholder="(99) 99999-9999">
             <p class="error-text">Número de contato inválido.</p>
             <div class="btn-container">
                 <input id="resetBtn" class="white-submit-btn" type="reset" value="Limpar">

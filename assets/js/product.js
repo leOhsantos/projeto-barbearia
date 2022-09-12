@@ -86,7 +86,7 @@ if (deleteProductModal) {
         deleteBtn.addEventListener("click", () => {
             alert("Produto excluído com sucesso!");
             deleteBtn.href = "crud-product.php?productId=" + recipient;
-        })
+        });
     });
 }
 
@@ -151,7 +151,7 @@ if (editProductModal) {
             submitBtn.addEventListener("click", () => {
                 alert("Produto editado com sucesso!");
                 formModal.submit();
-            })
+            });
         }
     });
 }

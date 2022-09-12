@@ -91,8 +91,8 @@ if (deleteClientModal) {
         deleteBtn.addEventListener("click", () => {
             alert("Cliente excluído com sucesso!");
             deleteBtn.href = "crud-client.php?clientId=" + recipient;
-        })
-    })
+        });
+    });
 }
 
 if (editClientModal) {
@@ -114,7 +114,7 @@ if (editClientModal) {
         nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         phoneInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
-    })
+    });
 
     editClientModal.addEventListener("input", () => {
         const formModal = editClientModal.querySelector("#formModal"),
@@ -152,9 +152,9 @@ if (editClientModal) {
             submitBtn.addEventListener("click", () => {
                 alert("Cliente editado com sucesso!");
                 formModal.submit();
-            })
+            });
         }
-    })
+    });
 }
 
 document.addEventListener("keypress", () => {

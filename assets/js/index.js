@@ -22,13 +22,13 @@ const validateFields = () => {
     let emailRegex = /\S+@\S+\.\S+/,
         emailTest = emailRegex.test(emailInput.value);
 
-    if (emailInput.value === "" || messageInput.value === "") {
+    if (emailTest === false || messageInput.value === "") {
         emailInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         emailErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
         messageInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         messageErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
 
-        if (emailInput.value !== "") {
+        if (emailTest === true) {
             emailInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
             emailErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
         }

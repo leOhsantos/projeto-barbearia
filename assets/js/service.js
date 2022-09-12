@@ -86,7 +86,7 @@ if (deleteServiceModal) {
         deleteBtn.addEventListener("click", () => {
             alert("Serviço excluído com sucesso!")
             deleteBtn.href = "crud-service.php?serviceId=" + recipient;
-        })
+        });
     });
 }
 
@@ -150,7 +150,7 @@ if (editServiceModal) {
             submitBtn.addEventListener("click", () => {
                 alert("Serviço editado com sucesso!");
                 formModal.submit();
-            })
+            });
         }
     });
 }
