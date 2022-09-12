@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/img/barbershop-logo-2.png" width="550em">
+<img src="assets/img/barbershop-logo-readme.png" width="550em">
 </div>
 
 <br>
