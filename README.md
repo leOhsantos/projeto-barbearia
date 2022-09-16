@@ -10,45 +10,30 @@
 
 ## 👨‍💻 Tecnologias utilizadas
 
-<br>
-
-<div align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50em">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50em">  
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50em"> 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="50em">   
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="50em">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="50em">   
-</div>
-
-<br>
-
-## 🛠️ Ferramentas utilizadas
-
-<br>
-
-<div align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50em">
-<img src="assets/img/xampp-icon.png" width="50em">
+<div align="left">
+ <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+ <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+ <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+ <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+ <img src="	https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
+ <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white">
 </div>
 
 <br>
 
 ## 📷 Design do sistema
 
-<br>
-
  - Página principal:
 
 <img src="assets/img/index.gif" width="100%">
 
-<br><br>
+<br>
 
  - Tela de login do administrador:
 
 <img src="assets/img/img-login.JPG" width="100%">
 
-<br><br>
+<br>
 
 - Algumas telas da área do administrador:
 
@@ -66,8 +51,7 @@
 
 <img src="assets/img/img-messages.JPG" width="100%">
 
-<br><br>
-
+<br>
 
 ## ⚙ Funcionalidades do sistema
 
