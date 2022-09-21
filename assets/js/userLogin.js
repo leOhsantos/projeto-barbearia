@@ -10,8 +10,8 @@ const form = document.getElementById("form"),
     previousUrl = document.referrer,
     linkValidateUserLogin = document.getElementById("linkValidateUserLogin").href;
 
-const validateFields = () => {
-    let userValue = userInput.value,
+function validateInputs() {
+    const userValue = userInput.value,
         passwordValue = passwordInput.value;
 
     if (userValue === "" || passwordValue === "") {
@@ -36,8 +36,8 @@ const validateFields = () => {
     }
 }
 
-const removeError = () => {
-    let userValue = userInput.value,
+function removeInputsError() {
+    const userValue = userInput.value,
         passwordValue = passwordInput.value;
 
     if (userValue !== "") {
@@ -51,7 +51,7 @@ const removeError = () => {
     }
 }
 
-const eyeClick = () => {
+function eyeClick() {
     if (passwordInput.type === "password") {
         passwordInput.setAttribute("type", "text");
         eyeButton.textContent = "visibility_off";
@@ -72,7 +72,7 @@ document.addEventListener("keypress", () => {
 });
 
 backButton.addEventListener("click", () => { window.history.back() });
-submitBtn.addEventListener("click", validateFields);
-userInput.addEventListener("input", removeError);
-passwordInput.addEventListener("input", removeError);
+submitBtn.addEventListener("click", validateInputs);
+userInput.addEventListener("input", removeInputsError);
+passwordInput.addEventListener("input", removeInputsError);
 eyeButton.addEventListener("click", eyeClick);

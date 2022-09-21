@@ -12,7 +12,7 @@ const form = document.getElementById("form"),
     deleteSchedulingModal = document.getElementById("deleteSchedulingModal"),
     editSchedulingModal = document.getElementById("editSchedulingModal");
 
-const validateFields = () => {
+function validateInputs() {
     if (clientInput.value == 0 || dateInput.value === "" || hourInput.value === "" || serviceInput.value == 0) {
         clientInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         clientErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
@@ -50,7 +50,7 @@ const validateFields = () => {
     }
 }
 
-const removeError = () => {
+function removeInputsError() {
     if (clientInput.value > 0) {
         clientInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         clientErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
@@ -72,7 +72,7 @@ const removeError = () => {
     }
 }
 
-const resetFields = () => {
+function resetInputs() {
     clientInput.value = 0;
     clientInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
     clientErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
@@ -162,9 +162,9 @@ document.addEventListener("keypress", () => {
 });
 
 form.addEventListener("submit", function (e) { e.preventDefault(); return false });
-clientInput.addEventListener("input", removeError);
-dateInput.addEventListener("input", removeError);
-hourInput.addEventListener("input", removeError);
-serviceInput.addEventListener("input", removeError);
-submitBtn.addEventListener("click", validateFields);
-resetBtn.addEventListener("click", resetFields);
+clientInput.addEventListener("input", removeInputsError);
+dateInput.addEventListener("input", removeInputsError);
+hourInput.addEventListener("input", removeInputsError);
+serviceInput.addEventListener("input", removeInputsError);
+submitBtn.addEventListener("click", validateInputs);
+resetBtn.addEventListener("click", resetInputs);

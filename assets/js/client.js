@@ -10,8 +10,8 @@ const form = document.getElementById("form"),
     deleteClientModal = document.getElementById("deleteClientModal"),
     editClientModal = document.getElementById("editClientModal");
 
-const validateFields = () => {
-    let emailRegex = /\S+@\S+\.\S+/,
+function validateInputs() {
+    const emailRegex = /\S+@\S+\.\S+/,
         emailTest = emailRegex.test(emailInput.value),
         phoneRegex = /^\(\d{2}\)\s\d{5}\-\d{4}/,
         phoneTest = phoneRegex.test(phoneInput.value);
@@ -46,8 +46,8 @@ const validateFields = () => {
     }
 }
 
-const removeError = () => {
-    let emailRegex = /\S+@\S+\.\S+/,
+function removeInputsError() {
+    const emailRegex = /\S+@\S+\.\S+/,
         emailTest = emailRegex.test(emailInput.value),
         phoneRegex = /^\(\d{2}\)\s\d{5}\-\d{4}/,
         phoneTest = phoneRegex.test(phoneInput.value);
@@ -68,7 +68,7 @@ const removeError = () => {
     }
 }
 
-const resetFields = () => {
+function resetInputs() {
     nameInput.value = "";
     nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
     nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
@@ -176,8 +176,8 @@ phoneInput.addEventListener("keypress", () => {
 });
 
 form.addEventListener("submit", function (e) { e.preventDefault(); return false });
-nameInput.addEventListener("input", removeError);
-emailInput.addEventListener("input", removeError);
-phoneInput.addEventListener("input", removeError);
-submitBtn.addEventListener("click", validateFields);
-resetBtn.addEventListener("click", resetFields);
+nameInput.addEventListener("input", removeInputsError);
+emailInput.addEventListener("input", removeInputsError);
+phoneInput.addEventListener("input", removeInputsError);
+submitBtn.addEventListener("click", validateInputs);
+resetBtn.addEventListener("click", resetInputs);

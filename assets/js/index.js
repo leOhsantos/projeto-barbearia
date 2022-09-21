@@ -6,8 +6,8 @@ const target = document.querySelectorAll("[data-anime]"),
     messageErrorText = document.getElementsByClassName("error-text")[1],
     submitBtn = document.getElementById("submitBtn");
 
-const activateScroll = () => {
-    const windowTop = window.pageYOffset + (window.innerHeight * 0.96);
+function animateElements() {
+    const windowTop = window.pageYOffset + (window.innerHeight * 0.75);
 
     target.forEach(e => {
         if (windowTop > e.offsetTop) {
@@ -15,11 +15,11 @@ const activateScroll = () => {
         } else {
             e.classList.remove("animate");
         }
-    })
+    });
 }
 
-const validateFields = () => {
-    let emailRegex = /\S+@\S+\.\S+/,
+function validateInputs() {
+    const emailRegex = /\S+@\S+\.\S+/,
         emailTest = emailRegex.test(emailInput.value);
 
     if (emailTest === false || messageInput.value === "") {
@@ -45,8 +45,8 @@ const validateFields = () => {
     }
 }
 
-const removeError = () => {
-    let emailRegex = /\S+@\S+\.\S+/,
+function removeInputsError() {
+    const emailRegex = /\S+@\S+\.\S+/,
         emailTest = emailRegex.test(emailInput.value);
 
     if (emailTest === true) {
@@ -62,12 +62,12 @@ const removeError = () => {
 
 document.addEventListener("keypress", () => {
     if (window.event.keyCode === 13) {
-        submitBtn.click()
-    };
-})
+        submitBtn.click();
+    }
+});
 
-window.addEventListener("scroll", _.debounce(activateScroll, 80));
+window.addEventListener("scroll", _.debounce(animateElements, 80));
 form.addEventListener("submit", function (e) { e.preventDefault(); return false });
-emailInput.addEventListener("input", removeError);
-messageInput.addEventListener("input", removeError);
-submitBtn.addEventListener("click", validateFields);
+emailInput.addEventListener("input", removeInputsError);
+messageInput.addEventListener("input", removeInputsError);
+submitBtn.addEventListener("click", validateInputs);

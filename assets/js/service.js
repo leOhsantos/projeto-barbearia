@@ -13,7 +13,7 @@ const form = document.getElementById("form"),
     deleteServiceModal = document.getElementById("deleteServiceModal"),
     editServiceModal = document.getElementById("editServiceModal");
 
-const validateFields = () => {
+function validateInputs() {
     if (nameInput.value === "" || descInput.value === "" || imgInput.value === "") {
         nameInput.style.cssText = "background-color: #f49c9c;" + "transition: .7s;";
         nameErrorText.style.cssText = "visibility: visible;" + "color: #e03333;" + "transition: .7s;";
@@ -44,7 +44,7 @@ const validateFields = () => {
     }
 }
 
-const removeError = () => {
+function removeInputsError() {
     if (nameInput.value !== "") {
         nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
         nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
@@ -61,7 +61,7 @@ const removeError = () => {
     }
 }
 
-const resetFields = () => {
+function resetInputs() {
     nameInput.value = "";
     nameInput.style.cssText = "background-color: #fff;" + "transition: .7s;";
     nameErrorText.style.cssText = "visibility: hidden;" + "color: rgb(218, 218, 218);" + "transition: .7s;";
@@ -174,8 +174,8 @@ document.addEventListener("keypress", () => {
 });
 
 form.addEventListener("submit", function (e) { e.preventDefault(); return false });
-nameInput.addEventListener("input", removeError);
-descInput.addEventListener("input", removeError);
-imgInput.addEventListener("input", removeError);
-submitBtn.addEventListener("click", validateFields);
-resetBtn.addEventListener("click", resetFields);
+nameInput.addEventListener("input", removeInputsError);
+descInput.addEventListener("input", removeInputsError);
+imgInput.addEventListener("input", removeInputsError);
+submitBtn.addEventListener("click", validateInputs);
+resetBtn.addEventListener("click", resetInputs);
