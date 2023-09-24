@@ -76,9 +76,3 @@
 - Validações de formulários:
 
     Os formulários possuem validações para evitar que haja a inserção ou alteração de um dado errado, como por exemplo, evitar que um campo vazio seja enviado ao banco de dados, ou também verificar se um endereço de e-mail é válido ou não.
-
-<br>
-
-## 🔗 Link do sistema
-
-▸ [Clique aqui para acessar](http://nareguabarbershop.atwebpages.com/)
